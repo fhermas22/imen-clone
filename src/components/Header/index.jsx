@@ -1,6 +1,10 @@
+import Navbar from "./components/Navbar"
+
 function Header() {
   return (
-    <header></header>
+    <header className="bg-white">
+      <Navbar />
+    </header>
   )
 }
 
