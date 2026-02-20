@@ -12,7 +12,7 @@ function Navbar() {
     }
 
     return (
-        <nav className="flex justify-around items-center w-[80%] mx-auto">
+        <nav className="relative z-50 flex justify-around items-center w-[80%] mx-auto shadow-md">
             {/* Logo */}
             <div>
                 <img className="w-40" src="src/assets/images/logo/imen_logo.png" alt="Logo de l'IMeN" />
