@@ -12,15 +12,21 @@ function Navbar() {
     }
 
     return (
-        <nav className="flex justify-around items-center w-[90%] mx-auto">
+        <nav className="flex justify-around items-center w-[80%] mx-auto">
             {/* Logo */}
             <div>
                 <img className="w-40" src="src/assets/images/logo/imen_logo.png" alt="Logo de l'IMeN" />
             </div>
 
             {/* Menu Options */}
-            <div className={`absolute md:static bg-white md:min-h-fit min-h-[60vh] left-0 -top-full md:w-auto w-full mt-[8vh] md:mt-0 flex items-center px-5 ${isOpen ? "top-0" : ""} transition-all duration-500`}>
-                <ul className="flex flex-col md:flex-row md:items-center md:gap-[4vw] gap-8">
+            <div className={`
+                absolute md:static bg-white left-0 -top-full md:w-auto w-full mt-[10vh] md:mt-0 
+                flex flex-col md:flex-row items-start md:items-center pb-6 px-5 md:pt-6 
+                ${isOpen ? "top-0" : ""} 
+                transition-all duration-500
+                max-h-[92vh] overflow-y-auto md:overflow-visible
+            `}>
+                <ul className="flex flex-col md:flex-row md:items-center md:gap-[3vw] gap-8">
                     <li>
                         <a className="text-primary font-title font-medium hover:text-secondary transition duration-300" href="#">Accueil</a>
                     </li>
@@ -29,11 +35,10 @@ function Navbar() {
                     <NavItemDropdown 
                         title="Découvrir l'IMeN" 
                         items={[
-                            { label: "Département Numérique", link: "#" },
-                            { label: "Département Design", link: "#" },
-                            { label: "Département Audiovisuel", link: "#" },
-                            { label: "Formations Continues", link: "#" },
-                            { label: "Workshops & Ateliers", link: "#" },
+                            { label: "L'école", link: "#" },
+                            { label: "Notre vision", link: "#" },
+                            { label: "Notre réseau", link: "#" },
+                            { label: "Le parcours de certification", link: "#" },
                         ]} 
                     />
 
