@@ -1,20 +1,38 @@
+import { Link } from 'react-router-dom';
 
-const Button = ({ children, isPrimary = true, className }) => {
-    const variantClasses = isPrimary 
-        ? 'bg-primary hover:bg-secondary' 
-        : 'bg-secondary hover:bg-primary';
+const Button = ({ children, isPrimary = true, className, to, href, type = "button", onClick }) => {
+    const baseClasses = `
+        ${isPrimary ? 'bg-primary hover:bg-secondary' : 'bg-secondary hover:bg-primary'} 
+        text-white text-lg font-body px-8 py-4 rounded-4xl 
+        transition-all duration-500 ease-in-out cursor-pointer
+        hover:scale-110 active:scale-95 text-center inline-block
+        ${className}
+    `;
 
+    // 1. If it's an internal link (using React Router's Link)
+    if (to) {
+        return (
+            <Link to={to} className={baseClasses}>
+                {children}
+            </Link>
+        );
+    }
+
+    // 2. If it's an external link (using a regular anchor tag)
+    if (href) {
+        return (
+            <a href={href} target="_blank" rel="noopener noreferrer" className={baseClasses}>
+                {children}
+            </a>
+        );
+    }
+
+    // 3. Else, it's a regular button
     return (
-        <button className={`
-            ${variantClasses} 
-            text-white text-lg font-body px-8 py-4 rounded-4xl 
-            transition-all duration-500 ease-in-out cursor-pointer
-            hover:scale-110 active:scale-95
-            ${className}
-        `}>
+        <button type={type} onClick={onClick} className={baseClasses}>
             {children}
         </button>
-    )
+    );
 }
 
-export default Button
+export default Button;
