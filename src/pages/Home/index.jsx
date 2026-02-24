@@ -1,4 +1,5 @@
 import HeroPhoto from "../../assets/images/photos/hero_photo.jpg";
+import Button from "../../components/Button";
 
 function Home() {
   return (
@@ -14,9 +15,17 @@ function Home() {
           loading="eager"
         />
 
-        {/*==== Sub-Section : Text ====*/}
-        <div className="absolute inset-0 bg-black/75 flex items-center justify-center">
-            <h1 className="font-title text-white text-5xl font-semibold capitalize">Premiere école d'expertise numérique</h1>
+        <div className="absolute inset-0 bg-black/75 flex flex-col items-center justify-center">
+            {/*==== Sub-Section : Text ====*/}
+            <h1 className="text-white text-5xl font-title font-semibold capitalize text-center">
+              Premiere école d'expertise numérique
+            </h1>
+
+            {/*==== Sub-Section : Buttons ====*/}
+            <div className="flex flex-row mt-14">
+              <Button isPrimary={true} className="mr-6">Découvrir l'IMeN</Button>
+              <Button isPrimary={false} className="">Devenir Étudiant</Button>
+            </div>
         </div>
 
       </div>
