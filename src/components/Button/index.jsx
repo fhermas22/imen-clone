@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 const Button = ({ children, isPrimary = true, className, to, href, type = "button", onClick }) => {
     const baseClasses = `
         ${isPrimary ? 'bg-primary hover:bg-secondary' : 'bg-secondary hover:bg-primary'} 
-        text-white text-lg font-body px-8 py-4 rounded-4xl 
+        text-white text-base font-body px-6 py-3 rounded-4xl 
         transition-all duration-500 ease-in-out cursor-pointer
-        hover:scale-110 active:scale-95 text-center inline-block
+        hover:scale-110 active:scale-95 text-center inline-block 
+        md:text-lg md:px-8 md:py-4
         ${className}
     `;
 
