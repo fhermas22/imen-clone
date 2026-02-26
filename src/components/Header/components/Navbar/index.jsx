@@ -24,13 +24,19 @@ function Navbar() {
                 /*--- Mobile Properties ---*/
                 absolute left-0 w-full bg-white shadow-lg z-[-2]
                 flex flex-col items-start pb-6 px-5 
+                
+                /* Transition Pro */
                 transition-all duration-500 ease-in-out
                 
                 /* Menu Opening Logic */
-                ${isOpen ? "top-full" : "-top-250"} 
+                ${isOpen 
+                    ? "top-full opacity-100 translate-y-0" 
+                    : "top-0 opacity-0 -translate-y-10 pointer-events-none"} 
 
                 /*--- Desktop Properties ---*/
-                md:static md:w-auto md:shadow-none md:flex-row md:items-center md:pt-0 md:pb-0 md:z-auto md:top-0
+                md:static md:w-auto md:shadow-none md:flex-row md:items-center 
+                md:pt-0 md:pb-0 md:z-auto md:top-0 md:opacity-100 
+                md:translate-y-0 md:pointer-events-auto
                 
                 /*--- Scroll Management ---*/
                 max-h-[90vh] overflow-y-auto md:overflow-visible
