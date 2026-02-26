@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Logo from "../../../../assets/images/logo/imen_logo.png";
-import MenuBlack from "../../../../assets/images/icons/menu-black.svg";
-import CloseBlack from "../../../../assets/images/icons/close-black.svg";
+import MenuWhite from "../../../../assets/images/icons/menu-white.svg";
+import CloseWhite from "../../../../assets/images/icons/close-white.svg";
 import NavItemDropdown from "../NavItemDropdown";
 
 function Navbar() {
@@ -13,21 +13,29 @@ function Navbar() {
     }
 
     return (
-        <nav className="relative z-50 flex justify-around items-center w-[80%] mx-auto shadow-md">
+        <nav className="relative z-50 flex justify-center items-center w-full mx-auto shadow-md">
             {/* Logo */}
             <div>
-                <img className="w-40" src={Logo} alt="Logo de l'IMeN" />
+                <img className="w-40 mr-16 md:mr-10" src={Logo} alt="Logo de l'IMeN" />
             </div>
 
             {/* Menu Options */}
             <div className={`
-                absolute md:static bg-white left-0 -top-full md:w-auto w-full mt-[10vh] md:mt-0 
-                flex flex-col md:flex-row items-start md:items-center pb-6 px-5 md:pt-6 
-                ${isOpen ? "top-0" : ""} 
-                transition-all duration-500
-                max-h-[92vh] overflow-y-auto md:overflow-visible
+                /*--- Mobile Properties ---*/
+                absolute left-0 w-full bg-white shadow-lg z-[-2]
+                flex flex-col items-start pb-6 px-5 
+                transition-all duration-500 ease-in-out
+                
+                /* Menu Opening Logic */
+                ${isOpen ? "top-full" : "-top-250"} 
+
+                /*--- Desktop Properties ---*/
+                md:static md:w-auto md:shadow-none md:flex-row md:items-center md:pt-0 md:pb-0 md:z-auto md:top-0
+                
+                /*--- Scroll Management ---*/
+                max-h-[90vh] overflow-y-auto md:overflow-visible
             `}>
-                <ul className="flex flex-col md:flex-row md:items-center md:gap-[3vw] gap-8">
+                <ul className="flex flex-col gap-8 md:flex-row md:items-center md:gap-[2vw]">
                     <li>
                         <a className="text-primary font-title font-medium hover:text-secondary transition duration-300" href="#">Accueil</a>
                     </li>
@@ -78,7 +86,7 @@ function Navbar() {
                 </ul>
             </div>
             <div className="flex items-center bg-primary rounded-md px-3 py-2 md:hidden">
-                <img src={isOpen ? CloseBlack : MenuBlack} onClick={toggleMenu} className="cursor-pointer" alt="Icône du menu" width="20" height="20" />
+                <img src={isOpen ? CloseWhite : MenuWhite} onClick={toggleMenu} className="cursor-pointer" alt="Icône du menu" width="20" height="20" />
             </div>
         </nav>
     )
