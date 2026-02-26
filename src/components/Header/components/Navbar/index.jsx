@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Logo from "../../../../assets/images/logo/imen_logo.png";
 import MenuBlack from "../../../../assets/images/icons/menu-black.svg";
 import CloseBlack from "../../../../assets/images/icons/close-black.svg";
 import NavItemDropdown from "../NavItemDropdown";
@@ -15,7 +16,7 @@ function Navbar() {
         <nav className="relative z-50 flex justify-around items-center w-[80%] mx-auto shadow-md">
             {/* Logo */}
             <div>
-                <img className="w-40" src="src/assets/images/logo/imen_logo.png" alt="Logo de l'IMeN" />
+                <img className="w-40" src={Logo} alt="Logo de l'IMeN" />
             </div>
 
             {/* Menu Options */}
