@@ -10,4 +10,7 @@
     /*====== Main Fonts ======*/
     --font-title: Poppins, sans-serif;
     --font-body: Inter, sans-serif;
+
+    /*====== Screen Custom Breakpoints ======*/
+    --breakpoint-xs: 375px;
 }

@@ -6,6 +6,7 @@ const Button = ({ children, isPrimary = true, className, to, href, type = "butto
         text-white text-base font-body px-6 py-3 rounded-4xl 
         transition-all duration-500 ease-in-out cursor-pointer
         hover:scale-110 active:scale-95 text-center inline-block 
+        xs:text-md xs:px-7 xs:py-3.5
         md:text-lg md:px-8 md:py-4
         ${className}
     `;

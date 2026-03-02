@@ -16,7 +16,7 @@ function Navbar() {
         <nav className="relative z-50 flex justify-center items-center w-full mx-auto shadow-md">
             {/* Logo */}
             <div>
-                <img className="w-40 mr-16 md:mr-10" src={Logo} alt="Logo de l'IMeN" />
+                <img className="w-40 mr-[30vw] md:mr-[60vw] lg:mr-10" src={Logo} alt="Logo de l'IMeN" />
             </div>
 
             {/* Menu Options */}
@@ -34,14 +34,14 @@ function Navbar() {
                     : "top-0 opacity-0 -translate-y-10 pointer-events-none"} 
 
                 /*--- Desktop Properties ---*/
-                md:static md:w-auto md:shadow-none md:flex-row md:items-center 
-                md:pt-0 md:pb-0 md:z-auto md:top-0 md:opacity-100 
-                md:translate-y-0 md:pointer-events-auto
+                lg:static lg:w-auto lg:flex-row lg:shadow-none lg:items-center 
+                lg:pt-0 lg:pb-0 lg:z-auto lg:top-0 lg:opacity-100 
+                lg:translate-y-0 lg:pointer-events-auto
                 
                 /*--- Scroll Management ---*/
-                max-h-[90vh] overflow-y-auto md:overflow-visible
+                max-h-[90vh] overflow-y-auto lg:overflow-visible
             `}>
-                <ul className="flex flex-col gap-8 md:flex-row md:items-center md:gap-[2vw]">
+                <ul className="flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-[2vw]">
                     <li>
                         <a className="text-primary font-title font-medium hover:text-secondary transition duration-300" href="#">Accueil</a>
                     </li>
@@ -91,7 +91,7 @@ function Navbar() {
                     </li>
                 </ul>
             </div>
-            <div className="flex items-center bg-primary rounded-md px-3 py-2 md:hidden">
+            <div className="flex items-center bg-primary rounded-md px-3 py-2 lg:hidden">
                 <img src={isOpen ? CloseWhite : MenuWhite} onClick={toggleMenu} className="cursor-pointer" alt="Icône du menu" width="20" height="20" />
             </div>
         </nav>

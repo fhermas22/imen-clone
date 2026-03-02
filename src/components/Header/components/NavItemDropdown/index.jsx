@@ -5,13 +5,13 @@ import ChevronDownSecondary from '../../../../assets/images/icons/chevron-down-s
 const NavItemDropdown = ({ title, items }) => {
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
 
-  // Function for hover on desktop (>= 768px)
+  // Function for hover on desktop (>= 1024px)
   const handleMouseEnter = () => {
-    if (window.innerWidth >= 768) setIsSubMenuOpen(true);
+    if (window.innerWidth >= 1024) setIsSubMenuOpen(true);
   };
 
   const handleMouseLeave = () => {
-    if (window.innerWidth >= 768) setIsSubMenuOpen(false);
+    if (window.innerWidth >= 1024) setIsSubMenuOpen(false);
   };
 
   // Function for click on mobile (< 768px)
@@ -47,16 +47,16 @@ const NavItemDropdown = ({ title, items }) => {
         pl-6
 
         /* --- DESKTOP (reset and positioning) --- */
-        md:absolute md:top-full md:left-0 md:bg-white md:shadow-md md:rounded-md 
-        md:py-2 md:min-w-56 md:mt-0 md:pl-0
-        md:opacity-100 md:max-h-none md:overflow-visible
-        ${isSubMenuOpen ? 'md:block' : 'md:hidden'}
+        lg:absolute lg:top-full lg:left-0 lg:bg-white lg:shadow-md lg:rounded-lg 
+        lg:py-2 lg:min-w-56 lg:mt-0 lg:pl-0
+        lg:opacity-100 lg:max-h-none lg:overflow-visible
+        ${isSubMenuOpen ? 'lg:block' : 'lg:hidden'}
       `}> 
         {items.map((item, index) => (
           <li key={index}>
             <a 
               href={item.link} 
-              className="block py-1.5 md:px-4 md:py-2 text-sm text-primary hover:text-secondary md:hover:bg-gray-100 transition"
+              className="block py-1.5 lg:px-4 lg:py-2 text-sm text-primary hover:text-secondary lg:hover:bg-gray-100 transition"
             >
               {item.label}
             </a>

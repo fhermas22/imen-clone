@@ -17,7 +17,7 @@ function Home() {
 
         <div className="absolute inset-0 bg-black/75 flex flex-col items-center justify-center">
             {/*==== Sub-Section : Text ====*/}
-            <h1 className="text-white text-3xl font-title font-semibold capitalize text-center md:text-5xl">
+            <h1 className="text-white text-3xl font-title font-semibold capitalize text-center px-2 xs:text-4xl md:text-5xl">
               Premiere école d'expertise numérique
             </h1>
 
