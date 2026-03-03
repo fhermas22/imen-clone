@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Logo from "../../../../assets/images/logo/imen_logo.png";
-import MenuWhite from "../../../../assets/images/icons/menu-white.svg";
-import CloseWhite from "../../../../assets/images/icons/close-white.svg";
+import Logo from "../../../../../assets/images/logo/imen_logo.png";
+import MenuWhite from "../../../../../assets/images/icons/menu-white.svg";
+import CloseWhite from "../../../../../assets/images/icons/close-white.svg";
 import NavItemDropdown from "../NavItemDropdown";
 
 function Navbar() {

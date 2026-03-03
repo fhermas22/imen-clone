@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import ChevronDownPrimary from '../../../../assets/images/icons/chevron-down-primary.svg';
-import ChevronDownSecondary from '../../../../assets/images/icons/chevron-down-secondary.svg';
+import ChevronDownPrimary from '../../../../../assets/images/icons/chevron-down-primary.svg';
+import ChevronDownSecondary from '../../../../../assets/images/icons/chevron-down-secondary.svg';
 
 const NavItemDropdown = ({ title, items }) => {
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
