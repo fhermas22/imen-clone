@@ -12,7 +12,7 @@ function Home() {
   return (
     <>
       {/*======== Section 1 : Hero  ======== */}
-      <section className="relative z-0 w-full h-96 overflow-hidden lg:h-104">
+      <section className="relative z-0 w-full h-90 overflow-hidden lg:h-104">
         
         {/*==== Sub-Section : Background Image ====*/}
         <img 
@@ -24,12 +24,12 @@ function Home() {
 
         <div className="absolute inset-0 bg-black/75 flex flex-col items-center justify-center">
             {/*==== Sub-Section : Text ====*/}
-            <h1 className="font-title text-white text-3xl font-semibold capitalize text-center px-2 xs:text-4xl md:text-5xl">
+            <h1 className="font-title text-white text-3xl font-semibold capitalize text-center px-2 xs:text-4xl md:text-[50px]">
               Premiere école d'expertise numérique
             </h1>
 
             {/*==== Sub-Section : Buttons ====*/}
-            <div className="flex flex-col items-center gap-4 mt-10 md:flex-row md:mt-14">
+            <div className="flex flex-col items-center gap-4 mt-10 md:flex-row md:mt-16">
               <Button isPrimary={true} className="md:mr-6">Découvrir l'IMeN</Button>
               <Button isPrimary={false} className="">Devenir Étudiant</Button>
             </div>
@@ -37,11 +37,11 @@ function Home() {
       </section>
 
       {/*======== Section 2 : Our Three Fundamental Pillars  ======== */}
-      <section className="w-full py-20 bg-white flex flex-col items-center">
+      <section className="w-full pt-12 pb-20 bg-white flex flex-col items-center">
         <div className="w-[90%] max-w-6xl flex flex-col items-center">
           {/*==== Sub-Section : Title ====*/}
-          <div className="flex flex-col items-center mb-16">
-              <h2 className="font-title text-primary text-[32px] font-bold text-center xs:text-[36px] md:text-[40px] leading-10">
+          <div className="flex flex-col items-center mb-12">
+              <h2 className="font-title text-primary text-2xl font-bold text-center xs:text-[36px] md:text-[40px] leading-9">
                   Nos trois <br /> piliers fondamentaux
               </h2>
               <div className="w-20 h-1 bg-secondary mt-4 rounded-full"></div>
@@ -50,17 +50,20 @@ function Home() {
           {/*==== Sub-Section : Pillar Cards ====*/}
           <div className="w-full flex flex-col items-stretch justify-center gap-8 lg:flex-row ">
             <PillarCard 
-              icon={GraduationCapBlue}
+              iconDefault={GraduationCapBlue}
+              iconHover={GraduationCapWhite}
               title="Formation Métier"
               description="Nous formons à un métier. Par la pratique pour rendre l’étudant oppérationnel sur le terrain."
             />
             <PillarCard 
-              icon={TeamBlue}
+              iconDefault={TeamBlue}
+              iconHover={TeamWhite}
               title="Centré sur l'humain"
               description="Nous mettons l’homme au coeur de nos formations, afin de fabriquer des professionnels aguerris et resilients."
             />
             <PillarCard 
-              icon={BusinessTimeBlue}
+              iconDefault={BusinessTimeBlue}
+              iconHover={BusinessTimeWhite}
               title="Employabilités des Jeunes"
               description="Nous formons à l’emploi et à l’auto-emploi, pour combattre le chômage galoppant."
             />

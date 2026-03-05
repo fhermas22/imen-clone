@@ -1,13 +1,18 @@
 
-function PillarCard({ icon, title, description }) {
+function PillarCard({ iconDefault, iconHover, title, description }) {
   return (
-    <div className="w-100 flex flex-col items-center px-6 py-12 border-2 border-border">
+    <div className="w-100 flex flex-col items-center px-6 py-12 border-2 border-border rounded-md group hover:border-secondary transition-all duration-600 ease-in-out">
       {/* Icon */}
-      <div className="flex items-center justify-center w-16 h-16 bg-[#f1f5f9] rounded-full mb-6">
+      <div className="flex items-center justify-center w-18 h-18 bg-[#f1f5f9] rounded-full mb-6 group-hover:bg-primary transition-colors duration-600 ease-in-out">
         <img 
-          src={icon} 
+          src={iconDefault} 
           alt={`Icône représentant le pilier '${title}'`}
-          className="w-8 h-8 object-contain"
+          className="w-8 h-8 object-contain group-hover:hidden"
+        />
+        <img 
+          src={iconHover} 
+          alt={`Icône représentant le pilier '${title}'`} 
+          className="hidden w-8 h-8 group-hover:block" 
         />
       </div>
 
