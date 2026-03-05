@@ -71,6 +71,11 @@ function Home() {
 
         </div>
       </section>
+
+      {/*======== Section 3 : Statistics  ======== */}
+      <section className="w-full h-60 bg-linear-to-r from-secondary to-primary">
+        <div className="flex flex-row items-center justify-around"></div>
+      </section>
     </>
   )
 }

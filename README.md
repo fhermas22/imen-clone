@@ -2,10 +2,10 @@
 
 <div align="center">
 
-[![React](https://img.shields.io/badge/React-19.2-blue?style=for-the-badge&logo=react)](https://react.dev)
+[![React](https://img.shields.io/badge/React-19.2.0-blue?style=for-the-badge&logo=react)](https://react.dev)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.1-38bdf8?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com)
 [![Vite](https://img.shields.io/badge/Vite-7.3-646CFF?style=for-the-badge&logo=vite)](https://vite.dev)
-[![Version](https://img.shields.io/badge/Version-0.2.0-green?style=flat-square)](https://github.com)
+[![Version](https://img.shields.io/badge/Version-0.2.0-green?style=flat-square)](https://github.com/fhermas22/imen-clone)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 </div>
@@ -16,6 +16,7 @@
 
 - **Responsive Navigation** — Fully responsive header with navbar and dropdown menus
 - **Hero Section** — Immersive hero with background image and call-to-action buttons
+- **Pillar Cards** — Reusable UI components for showcasing key information
 - **Modern UI** — Clean, professional design following the original IMeN branding
 - **Component-Based Architecture** — Reusable React components
 - **Routing** — Client-side routing with React Router DOM
@@ -24,11 +25,11 @@
 
 | Technology | Version | Description |
 |------------|---------|-------------|
-| React | 19.2 | Core UI framework |
-| Vite | 7.3 | Build tool and dev server |
-| Tailwind CSS | 4.1 | Utility-first CSS framework |
-| React Router DOM | 7.13 | Client-side routing |
-| ESLint | 10.0 | Code linting |
+| React | 19.2.0 | Core UI framework |
+| Vite | 7.3.1 | Build tool and dev server |
+| Tailwind CSS | 4.1.18 | Utility-first CSS framework |
+| React Router DOM | 7.13.1 | Client-side routing |
+| ESLint | 9.39.3 | Code linting |
 
 ## 📋 Prerequisites
 
@@ -76,24 +77,38 @@ npm run preview
 
 ```
 imen-clone/
-├── public/                    # Static assets
-│   └── favicon.ico
+├── public/                          # Static assets
+│   └── favicon.ico                  # Website favicon
 ├── src/
 │   ├── assets/
-│   │   └── images/           # Images, icons, logos
+│   │   └── images/                  # Images, icons, logos, illustrations
+│   │       ├── background/          # Background images
+│   │       ├── icons/               # SVG icons
+│   │       ├── illustrations/       # Illustration images
+│   │       ├── logo/                # Logo images
+│   │       └── photos/              # Photography assets
 │   ├── components/
-│   │   ├── Button/           # Reusable button component
-│   │   ├── Footer/           # Footer component
-│   │   └── Header/           # Header with Navbar & NavItemDropdown
+│   │   ├── common/
+│   │   │   └── Button/              # Reusable button component
+│   │   ├── layout/
+│   │   │   ├── Header/              # Header component with navbar
+│   │   │   │   └── components/
+│   │   │   │       ├── Navbar/      # Navigation bar
+│   │   │   │       └── NavItemDropdown/ # Dropdown menu items
+│   │   │   └── Footer/              # Footer component
+│   │   └── ui/
+│   │       └── PillarCard/          # UI card component
 │   ├── pages/
-│   │   └── Home/             # Home page
+│   │   └── Home/                    # Home page
 │   ├── utils/
-│   │   └── style/            # Global styles (app.css)
-│   └── main.jsx              # Application entry point
-├── index.html                 # HTML entry point
-├── package.json               # Dependencies and scripts
-├── vite.config.js            # Vite configuration
-└── eslint.config.js          # ESLint configuration
+│   │   └── style/                   # Global styles (app.css)
+│   ├── main.jsx                     # Application entry point
+│   └── App.jsx                      # Root component
+├── index.html                       # HTML entry point
+├── package.json                     # Dependencies and scripts
+├── vite.config.js                   # Vite configuration
+├── eslint.config.js                 # ESLint configuration
+└── vercel.json                      # Vercel deployment configuration
 ```
 
 ## 🎨 Available Scripts
