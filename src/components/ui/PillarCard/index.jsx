@@ -1,7 +1,7 @@
 
 function PillarCard({ iconDefault, iconHover, title, description }) {
   return (
-    <div className="w-100 flex flex-col items-center px-6 py-12 border-2 border-border rounded-md group hover:border-secondary transition-all duration-600 ease-in-out">
+    <div className="w-[90vw] flex flex-col items-center px-6 py-6 border-2 border-border rounded-md group hover:border-secondary transition-all duration-600 ease-in-out lg:w-100 lg:py-12">
       {/* Icon */}
       <div className="flex items-center justify-center w-18 h-18 bg-[#f1f5f9] rounded-full mb-6 group-hover:bg-primary transition-colors duration-600 ease-in-out">
         <img 

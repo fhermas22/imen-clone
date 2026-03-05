@@ -24,7 +24,7 @@ function Home() {
 
         <div className="absolute inset-0 bg-black/75 flex flex-col items-center justify-center">
             {/*==== Sub-Section : Text ====*/}
-            <h1 className="font-title text-white text-3xl font-semibold capitalize text-center px-2 xs:text-4xl md:text-[50px]">
+            <h1 className="font-title text-white text-3xl font-semibold capitalize text-center px-2 xs:text-4xl md:text-[44px] lg:text-[50px]">
               Premiere école d'expertise numérique
             </h1>
 
@@ -37,14 +37,14 @@ function Home() {
       </section>
 
       {/*======== Section 2 : Our Three Fundamental Pillars  ======== */}
-      <section className="w-full pt-12 pb-20 bg-white flex flex-col items-center">
+      <section className="w-full pt-8 pb-16 bg-white flex flex-col items-center lg:pt-12 lg:pb-20">
         <div className="w-[90%] max-w-6xl flex flex-col items-center">
           {/*==== Sub-Section : Title ====*/}
-          <div className="flex flex-col items-center mb-12">
-              <h2 className="font-title text-primary text-2xl font-bold text-center xs:text-[36px] md:text-[40px] leading-9">
+          <div className="flex flex-col items-center mb-8 lg:mb-12">
+              <h2 className="font-title text-primary text-2xl font-bold text-center leading-9 md:text-3xl lg:text-[40px]">
                   Nos trois <br /> piliers fondamentaux
               </h2>
-              <div className="w-20 h-1 bg-secondary mt-4 rounded-full"></div>
+              <div className="w-20 h-1 bg-secondary mt-4 rounded-full lg:mt-6"></div>
           </div>
           
           {/*==== Sub-Section : Pillar Cards ====*/}
