@@ -5,7 +5,7 @@
 [![React](https://img.shields.io/badge/React-19.2.0-blue?style=for-the-badge&logo=react)](https://react.dev)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.1-38bdf8?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com)
 [![Vite](https://img.shields.io/badge/Vite-7.3-646CFF?style=for-the-badge&logo=vite)](https://vite.dev)
-[![Version](https://img.shields.io/badge/Version-0.2.0-green?style=flat-square)](https://github.com/fhermas22/imen-clone)
+[![Version](https://img.shields.io/badge/Version-0.4.0-green?style=flat-square)](https://github.com/fhermas22/imen-clone)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 </div>
@@ -17,6 +17,7 @@
 - **Responsive Navigation** — Fully responsive header with navbar and dropdown menus
 - **Hero Section** — Immersive hero with background image and call-to-action buttons
 - **Pillar Cards** — Reusable UI components for showcasing key information
+- **Stats Counter** — Animated statistics display component
 - **Modern UI** — Clean, professional design following the original IMeN branding
 - **Component-Based Architecture** — Reusable React components
 - **Routing** — Client-side routing with React Router DOM
@@ -91,24 +92,24 @@ imen-clone/
 │   │   ├── common/
 │   │   │   └── Button/              # Reusable button component
 │   │   ├── layout/
-│   │   │   ├── Header/              # Header component with navbar
-│   │   │   │   └── components/
-│   │   │   │       ├── Navbar/      # Navigation bar
-│   │   │   │       └── NavItemDropdown/ # Dropdown menu items
-│   │   │   └── Footer/              # Footer component
+│   │   │   └── Header/              # Header component with navbar
+│   │   │       └── components/
+│   │   │           ├── Navbar/      # Navigation bar
+│   │   │           └── NavItemDropdown/ # Dropdown menu items
 │   │   └── ui/
-│   │       └── PillarCard/          # UI card component
+│   │       ├── PillarCard/          # UI card component
+│   │       └── StatsCounter/        # Animated statistics component
 │   ├── pages/
 │   │   └── Home/                    # Home page
 │   ├── utils/
 │   │   └── style/                   # Global styles (app.css)
-│   ├── main.jsx                     # Application entry point
-│   └── App.jsx                      # Root component
+│   ├── main.jsx                     # Application entry point with routing
+│   └── App.jsx                      # Root component (if used)
 ├── index.html                       # HTML entry point
 ├── package.json                     # Dependencies and scripts
-├── vite.config.js                   # Vite configuration
-├── eslint.config.js                 # ESLint configuration
-└── vercel.json                      # Vercel deployment configuration
+├── vite.config.js                    # Vite configuration
+├── eslint.config.js                  # ESLint configuration
+└── vercel.json                       # Vercel deployment configuration
 ```
 
 ## 🎨 Available Scripts
@@ -123,6 +124,20 @@ imen-clone/
 ## 📸 Screenshots
 
 > *(Screenshots will be added as the project develops)*
+
+## 📝 Changelog / Recent Updates
+
+### Version 0.4.0 (Current)
+
+- ✅ Added responsive header with navbar
+- ✅ Implemented dropdown navigation menus
+- ✅ Created hero section with background image
+- ✅ Built PillarCard reusable component
+- ✅ Added StatsCounter animated statistics component
+- ✅ Integrated React Router DOM for client-side routing
+- ✅ Set up Tailwind CSS v4 with Vite plugin
+
+---
 
 ## 🤝 Contributing
 
@@ -142,7 +157,7 @@ This project is for educational purposes. The original IMeN website content belo
 
 <div align="center">
 
-### ✨ Built with ❤️ by **@fhermas22** using **React** & **Tailwind CSS** ✨
+### ✨ Built with ❤️ by [<img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" height="18" /> **@fhermas22**](https://github.com/fhermas22) using **React** & **Tailwind CSS** ✨
 
 </div>
 
