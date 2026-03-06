@@ -7,6 +7,7 @@ import TeamBlue from "../../assets/images/icons/team-blue.svg";
 import TeamWhite from "../../assets/images/icons/team-white.svg";
 import BusinessTimeBlue from "../../assets/images/icons/business-time-blue.svg";
 import BusinessTimeWhite from "../../assets/images/icons/business-time-white.svg";
+import StatsCounter from "../../components/ui/StatsCounter";
 
 function Home() {
   return (
@@ -73,9 +74,15 @@ function Home() {
       </section>
 
       {/*======== Section 3 : Statistics  ======== */}
-      <section className="w-full h-60 bg-linear-to-r from-secondary to-primary">
-        <div className="flex flex-row items-center justify-around"></div>
+      <section className="w-full h-75 flex flex-row items-center justify-center gap-18 bg-linear-to-r from-secondary to-primary">
+        <StatsCounter number="72" title="Étudiants satisfaits" />
+        <StatsCounter number="16" title="Formations Réalisées" />
+        <StatsCounter number="39" title="Etudiants certifiés" />
+        <StatsCounter number="+100" title="Partenaires" />
       </section>
+
+      {/*======== Section 4 : ...  ======== */}
+      <section className="w-full h-20"></section>
     </>
   )
 }
