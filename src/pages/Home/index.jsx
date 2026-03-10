@@ -11,7 +11,7 @@ import StatsCounter from "../../components/ui/StatsCounter";
 
 function Home() {
   return (
-    <>
+    <main>
       {/*======== Section 1 : Hero  ======== */}
       <section className="relative z-0 w-full h-90 overflow-hidden lg:h-104">
         
@@ -83,7 +83,7 @@ function Home() {
 
       {/*======== Section 4 : ...  ======== */}
       <section className="w-full h-20"></section>
-    </>
+    </main>
   )
 }
 

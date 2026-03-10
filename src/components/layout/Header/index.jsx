@@ -4,6 +4,8 @@ function Header() {
   return (
     <header className="bg-white">
       <Navbar />
+
+      <div className="h-20"></div>
     </header>
   )
 }
