@@ -47,11 +47,11 @@ function StatsCounter({ number, title }) {
 
     return (
         <div ref={elementRef} className="flex flex-col items-center justify-around">
-            <h3 className="font-body text-white text-6xl font-bold text-center">
+            <h3 className="font-body text-white text-[40px] font-bold text-center lg:text-6xl">
                 {number >= 100 ? `+${count}` : `${count}`}
             </h3>
-            <div className="w-20 h-0.5 bg-white mt-4 rounded-full lg:mt-6"></div>
-            <p className="font-title text-white text-2xl font-medium text-center capitalize mt-4">
+            <div className="w-18 h-0.5 bg-white mt-2 rounded-full lg:mt-6 lg:w-20"></div>
+            <p className="font-title text-white text-2xl font-medium text-center capitalize mt-2 lg:mt-4">
                 {title}
             </p>
         </div>

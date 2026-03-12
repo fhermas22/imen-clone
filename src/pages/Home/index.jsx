@@ -74,7 +74,11 @@ function Home() {
       </section>
 
       {/*======== Section 3 : Statistics  ======== */}
-      <section className="w-full h-75 flex flex-row items-center justify-center gap-18 bg-linear-to-r from-secondary to-primary">
+      <section className="
+        w-full h-174 flex flex-col items-center justify-center gap-10 bg-linear-to-r from-secondary to-primary 
+        md:h-100 md:grid md:grid-cols-2 md:grid-rows-2 md:gap-0 md:p-12 
+        lg:h-75 lg:flex lg:flex-row lg:gap-18 lg:p-0
+      ">
         <StatsCounter number="72" title="Étudiants satisfaits" />
         <StatsCounter number="16" title="Formations Réalisées" />
         <StatsCounter number="39" title="Etudiants certifiés" />
