@@ -2,7 +2,7 @@ import { useState } from 'react';
 import ChevronDownPrimary from '../../../../../assets/images/icons/chevron-down-primary.svg';
 import ChevronDownSecondary from '../../../../../assets/images/icons/chevron-down-secondary.svg';
 
-const NavItemDropdown = ({ title, items }) => {
+const NavItemDropdown = ({ title, items}) => {
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
 
   // Function for hover on desktop (>= 1024px)
@@ -47,8 +47,8 @@ const NavItemDropdown = ({ title, items }) => {
         pl-6
 
         /* --- DESKTOP (reset and positioning) --- */
-        lg:absolute lg:top-full lg:left-0 lg:bg-white lg:shadow-md lg:rounded-lg 
-        lg:py-2 lg:min-w-56 lg:mt-0 lg:pl-0
+        lg:absolute lg:top-full lg:left-0 lg:shadow-md lg:rounded-lg
+        lg:py-2 lg:min-w-56 lg:mt-0 lg:pl-0 lg:bg-white 
         lg:opacity-100 lg:max-h-none lg:overflow-visible
         ${isSubMenuOpen ? 'lg:block' : 'lg:hidden'}
       `}> 

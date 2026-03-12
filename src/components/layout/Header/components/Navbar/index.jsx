@@ -40,7 +40,7 @@ function Navbar() {
             <div className={`
                 /*--- Mobile Properties ---*/
                 absolute left-0 w-full shadow-lg z-[-2]
-                flex flex-col items-start pb-6 px-5
+                flex flex-col items-start pt-4 pb-6 px-5
                 
                 /* Transition Pro */
                 transition-all duration-500 ease-in-out
@@ -51,7 +51,7 @@ function Navbar() {
                     : "top-0 opacity-0 -translate-y-10 pointer-events-none"} 
 
                 /*--- Scroll Management ---*/
-                ${isScrolled ? "" : "bg-white"}
+                ${isScrolled ? "bg-white/94 lg:bg-transparent" : "bg-white"}
 
                 /*--- Desktop Properties ---*/
                 lg:static lg:w-auto lg:flex-row lg:shadow-none lg:items-center 
