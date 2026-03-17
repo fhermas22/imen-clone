@@ -1,14 +1,20 @@
-import HeroPhoto from "../../assets/images/photos/imen-building.jpg";
 import Button from "../../components/common/Button";
 import PillarCard from "../../components/ui/PillarCard";
+import StatsCounter from "../../components/ui/StatsCounter";
+import SectionTitle from "../../components/ui/SectionTitle";
+import TrainingCard from "../../components/ui/TrainingCard";
+
 import GraduationCapBlue from "../../assets/images/icons/graduation-cap-blue.svg";
 import GraduationCapWhite from "../../assets/images/icons/graduation-cap-white.svg";
 import TeamBlue from "../../assets/images/icons/team-blue.svg";
 import TeamWhite from "../../assets/images/icons/team-white.svg";
 import BusinessTimeBlue from "../../assets/images/icons/business-time-blue.svg";
 import BusinessTimeWhite from "../../assets/images/icons/business-time-white.svg";
-import StatsCounter from "../../components/ui/StatsCounter";
-import SectionTitle from "../../components/ui/SectionTitle";
+
+import HeroPhoto from "../../assets/images/photos/imen-building.jpg";
+import ItProgrammingIllustration from "../../assets/images/illustrations/it-programming.jpg";
+import MotionDesignIllustration from "../../assets/images/illustrations/motion-design.jpg";
+import BigDataIAIllustration from "../../assets/images/illustrations/big-data-ai.jpg";
 
 function Home() {
   return (
@@ -92,16 +98,22 @@ function Home() {
           </SectionTitle>
 
           {/*==== Sub-Section : Training Cards ====*/}
-          <div className="flex flex-row items-center justify-center">
-            <div className="w-100 h-140 flex flex-col border-2 border-border rounded-md overflow-hidden">
-              <img 
-                src="src/assets/images/illustrations/it-programming.png" 
-                alt="Image illustrant deux étudiants de l'IMeN en Programmation Informatique travaillant ensemble sur un projet" 
-                width={626} 
-                height={417} 
-                className="" 
-                loading="lazy" />
-            </div>
+          <div className="flex flex-col items-stretch justify-center gap-8 lg:flex-row">
+            <TrainingCard 
+              title="Programmation Informatique"
+              description="La filière Programmation Informatique forme des professionnels capables de concevoir, développer et optimiser des logiciels, applications web et mobiles ainsi que des systèmes informatiques."
+              imageSrc={ItProgrammingIllustration}
+            />
+            <TrainingCard 
+              title="Motion Design"
+              description=""
+              imageSrc={MotionDesignIllustration}
+            />
+            <TrainingCard 
+              title="Big Data & Intelligence Artificielle"
+              description=""
+              imageSrc={BigDataIAIllustration}
+            />
           </div>
         </div>
       </section>
