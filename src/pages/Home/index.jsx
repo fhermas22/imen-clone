@@ -103,16 +103,19 @@ function Home() {
               title="Programmation Informatique"
               description="La filière Programmation Informatique forme des professionnels capables de concevoir, développer et optimiser des logiciels, applications web et mobiles ainsi que des systèmes informatiques."
               imageSrc={ItProgrammingIllustration}
+              category="Pôle Numérique"
             />
             <TrainingCard 
               title="Motion Design"
-              description=""
+              description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis debitis pariatur excepturi, ea nihil itaque exercitationem fugit laudantium voluptatum rerum laboriosam. Neque ipsa totam eius ducimus quaerat illum, placeat pariatur."
               imageSrc={MotionDesignIllustration}
+              category="Pôle Design"
             />
             <TrainingCard 
               title="Big Data & Intelligence Artificielle"
-              description=""
+              description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis debitis pariatur excepturi, ea nihil itaque exercitationem fugit laudantium voluptatum rerum laboriosam."
               imageSrc={BigDataIAIllustration}
+              category="Pôle Numérique"
             />
           </div>
         </div>
