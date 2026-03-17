@@ -45,7 +45,7 @@ function Home() {
       </section>
 
       {/*======== Section 2 : Our Three Fundamental Pillars  ======== */}
-      <section className="w-full pt-8 pb-16 bg-white flex flex-col items-center lg:pt-12 lg:pb-20">
+      <section className="w-full pt-10 pb-16 bg-white flex flex-col items-center lg:pt-12 lg:pb-20">
         <div className="w-[90%]">
           {/*==== Sub-Section : Title ====*/}
           <SectionTitle>
@@ -90,7 +90,7 @@ function Home() {
       </section>
 
       {/*======== Section 4 : Long-term Training Courses  ======== */}
-      <section className="w-full pt-8 pb-16 flex flex-col items-center lg:pt-14 lg:pb-20">
+      <section className="w-full pt-10 pb-16 flex flex-col items-center lg:pt-14 lg:pb-20">
         <div className="w-[90%]">
           {/*==== Sub-Section : Title ====*/}
           <SectionTitle> 

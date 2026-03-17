@@ -15,7 +15,7 @@ function TrainingCard({ title, description, imageSrc, link, category, categoryLi
             />
         </Link>
 
-        <div className="pt-8 pb-10 px-9 flex flex-col">
+        <div className="pt-5 pb-4 px-4 flex flex-col lg:pt-8 lg:pb-10 lg:px-9">
             {/* Training Category */}
             <span className="w-40 px-5 py-1 bg-secondary text-center rounded-sm hover:scale-102 group transition-all duration-500 ease-in-out">
                 <Link to={categoryLink} className="text-black text-sm capitalize group-hover:text-white transition-colors duration-500 ease-in-out">
