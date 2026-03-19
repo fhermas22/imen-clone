@@ -45,7 +45,7 @@ function Home() {
       </section>
 
       {/*======== Section 2 : Our Three Fundamental Pillars  ======== */}
-      <section id="section2" className="w-full pt-10 pb-16 bg-white flex flex-col items-center lg:pt-12 lg:pb-20">
+      <section id="section2" className="w-full pt-10 pb-16 bg-white flex flex-col items-center lg:pt-14 lg:pb-20">
         <div className="w-[90%]">
           {/*==== Sub-Section : Title ====*/}
           <SectionTitle>
@@ -90,7 +90,7 @@ function Home() {
       </section>
 
       {/*======== Section 4 : Long-term Training Courses  ======== */}
-      <section id="section4" className="w-full pt-10 pb-16 flex flex-col items-center lg:pt-14 lg:pb-20">
+      <section id="section4" className="w-full pt-10 pb-16 flex flex-col items-center lg:pt-14 lg:pb-10">
         <div className="w-[90%]">
           {/*==== Sub-Section : Title ====*/}
           <SectionTitle> 
@@ -121,8 +121,31 @@ function Home() {
         </div>
       </section>
 
-      {/*======== Section 5 : ...  ======== */}
-      <section id="section" className="w-full h-20"></section>
+      {/*======== Section 5 : Why Choose Us?  ======== */}
+      <section id="section5" className="w-full pt-10 pb-16 flex flex-col items-center lg:pt-14 lg:pb-20">
+        {/*==== Sub-Section : Title ====*/}
+        <SectionTitle>
+          Pourquoi nous choisir ?
+        </SectionTitle>
+
+        <div className="flex flex-row">
+          {/*==== Sub-Section : Illustration Image ====*/}
+          <img 
+            src="src/assets/images/illustrations/_initial/nos-etus.png" 
+            alt={`Image illustrant les étudiants de l'IMeN`} 
+            width={626} 
+            height={417} 
+            className="" 
+            loading="lazy" 
+          />
+
+          {/*==== Sub-Section : Content ====*/}
+          <div className="flex flex-col"></div>
+        </div>
+      </section>
+
+      {/*======== Section 6 : ...  ======== */}
+      <section id="section6" className="w-full h-20"></section>
     </main>
   )
 }
