@@ -98,7 +98,7 @@ function Home() {
           </SectionTitle>
 
           {/*==== Sub-Section : Training Cards ====*/}
-          <div className="flex flex-col items-stretch justify-center gap-8 lg:flex-row">
+          <div className="flex flex-col items-stretch justify-center gap-8 md:grid md:grid-cols-2 md:grid-rows-2 lg:flex lg:flex-row">
             <TrainingCard 
               title="Programmation Informatique"
               description="La filière Programmation Informatique forme des professionnels capables de concevoir, développer et optimiser des logiciels, applications web et mobiles ainsi que des systèmes informatiques."
