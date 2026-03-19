@@ -20,7 +20,7 @@ function Home() {
   return (
     <main>
       {/*======== Section 1 : Hero  ======== */}
-      <section className="relative z-0 w-full h-90 overflow-hidden lg:h-104">
+      <section id="section1" className="relative z-0 w-full h-90 overflow-hidden lg:h-104">
         
         {/*==== Sub-Section : Background Image ====*/}
         <img 
@@ -45,7 +45,7 @@ function Home() {
       </section>
 
       {/*======== Section 2 : Our Three Fundamental Pillars  ======== */}
-      <section className="w-full pt-10 pb-16 bg-white flex flex-col items-center lg:pt-12 lg:pb-20">
+      <section id="section2" className="w-full pt-10 pb-16 bg-white flex flex-col items-center lg:pt-12 lg:pb-20">
         <div className="w-[90%]">
           {/*==== Sub-Section : Title ====*/}
           <SectionTitle>
@@ -78,7 +78,7 @@ function Home() {
       </section>
 
       {/*======== Section 3 : Statistics  ======== */}
-      <section className="
+      <section id="section3" className="
         w-full h-174 flex flex-col items-center justify-center gap-10 bg-linear-to-r from-secondary to-primary 
         md:h-100 md:grid md:grid-cols-2 md:grid-rows-2 md:gap-0 md:p-12 
         lg:h-75 lg:flex lg:flex-row lg:gap-18 lg:p-0
@@ -90,7 +90,7 @@ function Home() {
       </section>
 
       {/*======== Section 4 : Long-term Training Courses  ======== */}
-      <section className="w-full pt-10 pb-16 flex flex-col items-center lg:pt-14 lg:pb-20">
+      <section id="section4" className="w-full pt-10 pb-16 flex flex-col items-center lg:pt-14 lg:pb-20">
         <div className="w-[90%]">
           {/*==== Sub-Section : Title ====*/}
           <SectionTitle> 
@@ -122,7 +122,7 @@ function Home() {
       </section>
 
       {/*======== Section 5 : ...  ======== */}
-      <section className="w-full h-20"></section>
+      <section id="section" className="w-full h-20"></section>
     </main>
   )
 }
