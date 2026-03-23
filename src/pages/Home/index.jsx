@@ -4,6 +4,7 @@ import PillarCard from "../../components/ui/PillarCard";
 import StatsCounter from "../../components/ui/StatsCounter";
 import SectionTitle from "../../components/ui/SectionTitle";
 import TrainingCard from "../../components/ui/TrainingCard";
+import ValuePoint from "../../components/ui/ValuePoint";
 {/*== Icons Imports  == */}
 import GraduationCapBlue from "../../assets/images/icons/graduation-cap-blue.svg";
 import GraduationCapWhite from "../../assets/images/icons/graduation-cap-white.svg";
@@ -11,6 +12,10 @@ import TeamBlue from "../../assets/images/icons/team-blue.svg";
 import TeamWhite from "../../assets/images/icons/team-white.svg";
 import BusinessTimeBlue from "../../assets/images/icons/business-time-blue.svg";
 import BusinessTimeWhite from "../../assets/images/icons/business-time-white.svg";
+import CrownBlue from "../../assets/images/icons/crown-line-blue.svg";
+import LightbulbBlue from "../../assets/images/icons/lightbulb-minimalistic-blue.svg";
+import SuitecaseBlue from "../../assets/images/icons/suitcase-blue.svg";
+import MedalStarBlue from "../../assets/images/icons/medal-star-square-blue.svg";
 {/*== Photos & Illustrations Imports  == */}
 import HeroPhoto from "../../assets/images/photos/imen-building.jpg";
 import ItProgrammingIllustration from "../../assets/images/illustrations/long.term.training/it-programming.jpg";
@@ -137,12 +142,31 @@ function Home() {
             alt={`Image illustrant les étudiants de l'IMeN`} 
             width={626} 
             height={417} 
-            className="" 
+            className="rounded-md" 
             loading="lazy" 
           />
 
           {/*==== Sub-Section : Content ====*/}
-          <div className="flex flex-col"></div>
+          <div className="flex flex-col items-center justify-center gap-6 px-18">
+            <ValuePoint 
+              icon={CrownBlue} 
+              text="Meilleur dans votre domaine, nous vous formons pour l'expertise et l'excellence." 
+            />
+            <ValuePoint 
+              icon={LightbulbBlue} 
+              text="100% Pratique, la praticité de nos cours vous rend opérationnel sur le terrain." 
+            />
+            <ValuePoint 
+              icon={SuitecaseBlue} 
+              text="Employabilité Stage garanti, Emploi certain." 
+            />
+            <ValuePoint 
+              icon={MedalStarBlue} 
+              text="Certificats Votre parcours est couronné par un certificat reconnu par l'Etat." 
+            />
+
+            <Button isPrimary={true} className="self-start mt-4">Devenir Étudiant</Button>
+          </div>
         </div>
       </section>
 
