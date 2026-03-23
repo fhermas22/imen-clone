@@ -5,7 +5,7 @@
 [![React](https://img.shields.io/badge/React-19.2.0-blue?style=for-the-badge&logo=react)](https://react.dev)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.1-38bdf8?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com)
 [![Vite](https://img.shields.io/badge/Vite-7.3-646CFF?style=for-the-badge&logo=vite)](https://vite.dev)
-[![Version](https://img.shields.io/badge/Version-0.4.0-green?style=flat-square)](https://github.com/fhermas22/imen-clone)
+[![Version](https://img.shields.io/badge/Version-0.0.6-green?style=flat-square)](https://github.com/fhermas22/imen-clone)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 </div>
@@ -98,7 +98,10 @@ imen-clone/
 │   │   │           └── NavItemDropdown/ # Dropdown menu items
 │   │   └── ui/
 │   │       ├── PillarCard/          # UI card component
-│   │       └── StatsCounter/        # Animated statistics component
+│   │       ├── SectionTitle/        # Section title component
+│   │       ├── StatsCounter/        # Animated statistics component
+│   │       ├── TrainingCard/        # Training card component
+│   │       └── ValuePoint/          # Value point component
 │   ├── pages/
 │   │   └── Home/                    # Home page
 │   ├── utils/
@@ -127,13 +130,16 @@ imen-clone/
 
 ## 📝 Changelog / Recent Updates
 
-### Version 0.4.0 (Current)
+### Version 0.0.6 (Current)
 
 - ✅ Added responsive header with navbar
 - ✅ Implemented dropdown navigation menus
 - ✅ Created hero section with background image
 - ✅ Built PillarCard reusable component
 - ✅ Added StatsCounter animated statistics component
+- ✅ Added SectionTitle reusable component
+- ✅ Added TrainingCard component for long-term formations section
+- ✅ Added ValuePoint component for "Why choose us?" section
 - ✅ Integrated React Router DOM for client-side routing
 - ✅ Set up Tailwind CSS v4 with Vite plugin
 
@@ -151,13 +157,13 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📄 License
 
-This project is for educational purposes. The original IMeN website content belongs to **Institut des Métiers du Numérique**.
+This project is for educational purposes. The original IMeN website content belongs to **Institut des Métiers du Numérique**. Official website: https://imen.school
 
 ---
 
 <div align="center">
 
-### ✨ Built with ❤️ by [<img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" height="18" /> **@fhermas22**](https://github.com/fhermas22) using **React** & **Tailwind CSS** ✨
+### ✨ Built with ❤️ by [**@fhermas22**](https://github.com/fhermas22) using **React** & **Tailwind CSS** ✨
 
 </div>
 
