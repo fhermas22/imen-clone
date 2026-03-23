@@ -1,20 +1,22 @@
+{/*== Components Imports  == */}
 import Button from "../../components/common/Button";
 import PillarCard from "../../components/ui/PillarCard";
 import StatsCounter from "../../components/ui/StatsCounter";
 import SectionTitle from "../../components/ui/SectionTitle";
 import TrainingCard from "../../components/ui/TrainingCard";
-
+{/*== Icons Imports  == */}
 import GraduationCapBlue from "../../assets/images/icons/graduation-cap-blue.svg";
 import GraduationCapWhite from "../../assets/images/icons/graduation-cap-white.svg";
 import TeamBlue from "../../assets/images/icons/team-blue.svg";
 import TeamWhite from "../../assets/images/icons/team-white.svg";
 import BusinessTimeBlue from "../../assets/images/icons/business-time-blue.svg";
 import BusinessTimeWhite from "../../assets/images/icons/business-time-white.svg";
-
+{/*== Photos & Illustrations Imports  == */}
 import HeroPhoto from "../../assets/images/photos/imen-building.jpg";
-import ItProgrammingIllustration from "../../assets/images/illustrations/it-programming.jpg";
-import MotionDesignIllustration from "../../assets/images/illustrations/motion-design.jpg";
-import BigDataIAIllustration from "../../assets/images/illustrations/big-data-ai.jpg";
+import ItProgrammingIllustration from "../../assets/images/illustrations/long.term.training/it-programming.jpg";
+import MotionDesignIllustration from "../../assets/images/illustrations/long.term.training/motion-design.jpg";
+import BigDataIAIllustration from "../../assets/images/illustrations/long.term.training/big-data-ai.jpg";
+import OurStudents from "../../assets/images/illustrations/other/our-students.jpg";
 
 function Home() {
   return (
@@ -131,7 +133,7 @@ function Home() {
         <div className="flex flex-row">
           {/*==== Sub-Section : Illustration Image ====*/}
           <img 
-            src="src/assets/images/illustrations/_initial/nos-etus.png" 
+            src={OurStudents} 
             alt={`Image illustrant les étudiants de l'IMeN`} 
             width={626} 
             height={417} 
