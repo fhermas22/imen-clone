@@ -97,7 +97,7 @@ function Home() {
       </section>
 
       {/*======== Section 4 : Long-term Training Courses  ======== */}
-      <section id="section4" className="w-full pt-10 pb-16 flex flex-col items-center lg:pt-14 lg:pb-10">
+      <section id="section4" className="w-full pt-10 pb-8 flex flex-col items-center lg:pt-14 lg:pb-10">
         <div className="w-[90%]">
           {/*==== Sub-Section : Title ====*/}
           <SectionTitle> 
@@ -135,19 +135,19 @@ function Home() {
           Pourquoi nous choisir ?
         </SectionTitle>
 
-        <div className="flex flex-row">
+        <div className="flex flex-col items-center justify-center lg:gap-4 lg:flex-row">
           {/*==== Sub-Section : Illustration Image ====*/}
           <img 
             src={OurStudents} 
             alt={`Image illustrant les étudiants de l'IMeN`} 
             width={626} 
             height={417} 
-            className="rounded-md" 
+            className="rounded-md w-[90vw] mb-8 md:mb-12 lg:w-[32vw] lg:mb-0" 
             loading="lazy" 
           />
 
           {/*==== Sub-Section : Content ====*/}
-          <div className="flex flex-col items-center justify-center gap-6 px-18">
+          <div className="flex flex-col items-center justify-center gap-6 w-screen px-18 lg:w-[36vw]">
             <ValuePoint 
               icon={CrownBlue} 
               text="Meilleur dans votre domaine, nous vous formons pour l'expertise et l'excellence." 
@@ -165,7 +165,9 @@ function Home() {
               text="Certificats Votre parcours est couronné par un certificat reconnu par l'Etat." 
             />
 
-            <Button isPrimary={true} className="self-start mt-4">Devenir Étudiant</Button>
+            <span className="flex justify-center w-full lg:justify-start">
+              <Button isPrimary={true} className="self-start mt-4">Devenir Étudiant</Button>
+            </span>
           </div>
         </div>
       </section>
