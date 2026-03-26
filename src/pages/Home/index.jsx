@@ -114,13 +114,13 @@ function Home() {
             />
             <TrainingCard 
               title="Motion Design"
-              description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis debitis pariatur excepturi, ea nihil itaque exercitationem fugit laudantium voluptatum rerum laboriosam. Neque ipsa totam eius ducimus quaerat illum, placeat pariatur."
+              description="La filière Motion Design forme des créatifs capables de donner vie à des graphismes par l'animation 2D/3D, la production de vidéos dynamiques et la conception d'effets visuels pour le digital et les médias."
               imageSrc={MotionDesignIllustration}
               category="Pôle Design"
             />
             <TrainingCard 
               title="Big Data & Intelligence Artificielle"
-              description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis debitis pariatur excepturi, ea nihil itaque exercitationem fugit laudantium voluptatum rerum laboriosam."
+              description="La filière Big Data & Intelligence Artificielle forme des experts capables de collecter, analyser et exploiter des données massives pour concevoir des modèles prédictifs et des solutions d'automatisation intelligente."
               imageSrc={BigDataIAIllustration}
               category="Pôle Numérique"
             />
