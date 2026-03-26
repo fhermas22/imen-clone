@@ -1,27 +1,17 @@
-{/*== Components Imports  == */}
+{/*== Component Imports  == */}
 import Button from "../../components/common/Button";
 import PillarCard from "../../components/ui/PillarCard";
 import StatsCounter from "../../components/ui/StatsCounter";
 import SectionTitle from "../../components/ui/SectionTitle";
 import TrainingCard from "../../components/ui/TrainingCard";
 import ValuePoint from "../../components/ui/ValuePoint";
-{/*== Icons Imports  == */}
-import GraduationCapBlue from "../../assets/images/icons/graduation-cap-blue.svg";
-import GraduationCapWhite from "../../assets/images/icons/graduation-cap-white.svg";
-import TeamBlue from "../../assets/images/icons/team-blue.svg";
-import TeamWhite from "../../assets/images/icons/team-white.svg";
-import BusinessTimeBlue from "../../assets/images/icons/business-time-blue.svg";
-import BusinessTimeWhite from "../../assets/images/icons/business-time-white.svg";
-import CrownBlue from "../../assets/images/icons/crown-line-blue.svg";
-import LightbulbBlue from "../../assets/images/icons/lightbulb-minimalistic-blue.svg";
-import SuitecaseBlue from "../../assets/images/icons/suitcase-blue.svg";
-import MedalStarBlue from "../../assets/images/icons/medal-star-square-blue.svg";
-{/*== Photos & Illustrations Imports  == */}
+{/*== Photo & Illustration Imports  == */}
 import HeroPhoto from "../../assets/images/photos/imen-building.jpg";
-import ItProgrammingIllustration from "../../assets/images/illustrations/long.term.training/it-programming.jpg";
-import MotionDesignIllustration from "../../assets/images/illustrations/long.term.training/motion-design.jpg";
-import BigDataIAIllustration from "../../assets/images/illustrations/long.term.training/big-data-ai.jpg";
 import OurStudents from "../../assets/images/illustrations/other/our-students.jpg";
+{/*== Data Imports  == */}
+import { pillarList } from "../../datas/pillarList";
+import { longTrainingList } from "../../datas/longTrainingList";
+import { valuePointList } from "../../datas/valuePointList";
 
 function Home() {
   return (
@@ -61,24 +51,17 @@ function Home() {
           
           {/*==== Sub-Section : Pillar Cards ====*/}
           <div className="w-full flex flex-col items-stretch justify-center gap-8 lg:flex-row ">
-            <PillarCard 
-              iconDefault={GraduationCapBlue}
-              iconHover={GraduationCapWhite}
-              title="Formation Métier"
-              description="Nous formons à un métier. Par la pratique pour rendre l’étudant oppérationnel sur le terrain."
-            />
-            <PillarCard 
-              iconDefault={TeamBlue}
-              iconHover={TeamWhite}
-              title="Centré sur l'humain"
-              description="Nous mettons l’homme au coeur de nos formations, afin de fabriquer des professionnels aguerris et resilients."
-            />
-            <PillarCard 
-              iconDefault={BusinessTimeBlue}
-              iconHover={BusinessTimeWhite}
-              title="Employabilités des Jeunes"
-              description="Nous formons à l’emploi et à l’auto-emploi, pour combattre le chômage galoppant."
-            />
+            {
+              pillarList.map(pillar => (
+                <PillarCard 
+                  key={pillar.id}
+                  iconDefault={pillar.iconDefault}
+                  iconHover={pillar.iconHover}
+                  title={pillar.title}
+                  description={pillar.description}
+                />
+              ))
+            }
           </div>
 
         </div>
@@ -106,24 +89,17 @@ function Home() {
 
           {/*==== Sub-Section : Training Cards ====*/}
           <div className="flex flex-col items-stretch justify-center gap-8 md:grid md:grid-cols-2 md:grid-rows-2 lg:flex lg:flex-row">
-            <TrainingCard 
-              title="Programmation Informatique"
-              description="La filière Programmation Informatique forme des professionnels capables de concevoir, développer et optimiser des logiciels, applications web et mobiles ainsi que des systèmes informatiques."
-              imageSrc={ItProgrammingIllustration}
-              category="Pôle Numérique"
-            />
-            <TrainingCard 
-              title="Motion Design"
-              description="La filière Motion Design forme des créatifs capables de donner vie à des graphismes par l'animation 2D/3D, la production de vidéos dynamiques et la conception d'effets visuels pour le digital et les médias."
-              imageSrc={MotionDesignIllustration}
-              category="Pôle Design"
-            />
-            <TrainingCard 
-              title="Big Data & Intelligence Artificielle"
-              description="La filière Big Data & Intelligence Artificielle forme des experts capables de collecter, analyser et exploiter des données massives pour concevoir des modèles prédictifs et des solutions d'automatisation intelligente."
-              imageSrc={BigDataIAIllustration}
-              category="Pôle Numérique"
-            />
+            {
+              longTrainingList.map(training => (
+                <TrainingCard 
+                  key={training.id}
+                  title={training.title}
+                  description={training.description}
+                  imageSrc={training.imageSrc}
+                  category={training.category}
+                />
+              ))
+            }
           </div>
         </div>
       </section>
@@ -148,23 +124,16 @@ function Home() {
 
           {/*==== Sub-Section : Content ====*/}
           <div className="flex flex-col items-center justify-center gap-6 w-screen px-18 lg:w-[36vw]">
-            <ValuePoint 
-              icon={CrownBlue} 
-              text="Meilleur dans votre domaine, nous vous formons pour l'expertise et l'excellence." 
-            />
-            <ValuePoint 
-              icon={LightbulbBlue} 
-              text="100% Pratique, la praticité de nos cours vous rend opérationnel sur le terrain." 
-            />
-            <ValuePoint 
-              icon={SuitecaseBlue} 
-              text="Employabilité Stage garanti, Emploi certain." 
-            />
-            <ValuePoint 
-              icon={MedalStarBlue} 
-              text="Certificats Votre parcours est couronné par un certificat reconnu par l'Etat." 
-            />
-
+            {
+              valuePointList.map(point => (
+                <ValuePoint 
+                  key={point.id}
+                  icon={point.icon}
+                  text={point.text}
+                />
+              ))
+            }
+            
             <span className="flex justify-center w-full lg:justify-start">
               <Button isPrimary={true} className="self-start mt-4">Devenir Étudiant</Button>
             </span>
