@@ -12,6 +12,7 @@ import OurStudents from "../../assets/images/illustrations/other/our-students.jp
 import { pillarList } from "../../datas/pillarList";
 import { longTrainingList } from "../../datas/longTrainingList";
 import { valuePointList } from "../../datas/valuePointList";
+import { continuingEducationList } from "../../datas/continuingEducationList";
 
 function Home() {
   return (
@@ -105,7 +106,7 @@ function Home() {
       </section>
 
       {/*======== Section 5 : Why Choose Us?  ======== */}
-      <section id="section5" className="w-full pt-10 pb-16 flex flex-col items-center lg:pt-14 lg:pb-20">
+      <section id="section5" className="w-full pt-10 pb-8 flex flex-col items-center lg:pt-14 lg:pb-10">
         {/*==== Sub-Section : Title ====*/}
         <SectionTitle>
           Pourquoi nous choisir ?
@@ -133,7 +134,7 @@ function Home() {
                 />
               ))
             }
-            
+
             <span className="flex justify-center w-full lg:justify-start">
               <Button isPrimary={true} className="self-start mt-4">Devenir Étudiant</Button>
             </span>
@@ -141,8 +142,30 @@ function Home() {
         </div>
       </section>
 
-      {/*======== Section 6 : ...  ======== */}
-      <section id="section6" className="w-full h-20"></section>
+      {/*======== Section 6 : Continuing Education  ======== */}
+      <section id="section6" className="w-full pt-10 pb-16 flex flex-col items-center lg:pt-14 lg:pb-20">
+        <div className="w-[90%]">
+          {/*==== Sub-Section : Title ====*/}
+          <SectionTitle>
+            Formations Continues
+          </SectionTitle>
+
+          {/*==== Sub-Section : Training Cards ====*/}
+          <div className="flex flex-col items-stretch justify-center gap-8 md:grid md:grid-cols-2 md:grid-rows-2 lg:flex lg:flex-row">
+            {
+              continuingEducationList.map(training => (
+                <TrainingCard 
+                  key={training.id}
+                  title={training.title}
+                  description={training.description}
+                  imageSrc={training.imageSrc}
+                  category={training.category}
+                />
+              ))
+            }
+          </div>
+        </div>
+      </section>
     </main>
   )
 }
