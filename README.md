@@ -129,9 +129,9 @@ Configures SPA rewrites + asset caching.
 
 ## 📸 Screenshots
 
-![Home Page](src/assets/screenshots/home_page.png)
-
-<div class=\"w-full md:w-1/2 mx-auto\">
+<p align="center">
+<img src="src/assets/screenshots/home_page.png" width="280" alt="IMeN Clone Home Page Screenshot">
+</p>
 
 ## 📝 Changelog
 
@@ -157,7 +157,7 @@ Educational clone. Original © IMeN (https://imen.school)
 
 ---
 
-<div align=\"center\">
+<div align="center">
 
 ✨ **Built by [@fhermas22](https://github.com/fhermas22)** ✨
 
