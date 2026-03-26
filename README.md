@@ -1,76 +1,72 @@
 # IMeN Clone
 
-<div align="center">
+<div align=\"center\">
 
 [![React](https://img.shields.io/badge/React-19.2.0-blue?style=for-the-badge&logo=react)](https://react.dev)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.1-38bdf8?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com)
 [![Vite](https://img.shields.io/badge/Vite-7.3-646CFF?style=for-the-badge&logo=vite)](https://vite.dev)
-[![Version](https://img.shields.io/badge/Version-0.0.6-green?style=flat-square)](https://github.com/fhermas22/imen-clone)
+[![Version](https://img.shields.io/badge/Version-0.0.7-green?style=flat-square)](https://github.com/fhermas22/imen-clone)
+[![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel)](https://vercel.com)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 </div>
 
-> A modern clone of the **Institut des Métiers du Numérique (IMeN)** website, built with React, Vite, and Tailwind CSS. This project replicates the professional look and feel of the original IMeN website, serving as a learning exercise and demonstration of modern frontend development practices.
+> A modern clone of the **Institut des Métiers du Numérique (IMeN)** website, built with React, Vite, and Tailwind CSS v4. This project replicates the professional look and feel of the original IMeN website with fully responsive design and data-driven sections, serving as a learning exercise in modern frontend development.
 
 ## ✨ Features
 
-- **Responsive Navigation** — Fully responsive header with navbar and dropdown menus
-- **Hero Section** — Immersive hero with background image and call-to-action buttons
-- **Pillar Cards** — Reusable UI components for showcasing key information
-- **Stats Counter** — Animated statistics display component
-- **Modern UI** — Clean, professional design following the original IMeN branding
-- **Component-Based Architecture** — Reusable React components
-- **Routing** — Client-side routing with React Router DOM
+- **Responsive Header & Navigation** — Header with Navbar and NavItemDropdown support
+- **Hero Section** — Immersive hero with IMeN building photo and primary/secondary CTA buttons
+- **Fundamental Pillars** — 3 PillarCards with hover icons (Formation Métier, Centré Humain, Employabilité)
+- **Animated Stats** — StatsCounter for 72+ students, 16 formations, 39 certifiés, +100 partners
+- **Long-term Formations** — 3 TrainingCards (Programmation Informatique, Motion Design, Big Data & IA)
+- **Why Choose Us** — ValuePoint list (4 points) with illustration and CTA
+- **Continuing Education** — 3 TrainingCards (Dev Web, Maintenance Informatique, Web Design)
+- **Component-Based & Data-Driven** — Reusable UI components + datas/*.js
+- **Client-Side Routing** — React Router DOM ready
 
 ## 🛠️ Tech Stack
 
 | Technology | Version | Description |
 |------------|---------|-------------|
-| React | 19.2.0 | Core UI framework |
-| Vite | 7.3.1 | Build tool and dev server |
-| Tailwind CSS | 4.1.18 | Utility-first CSS framework |
-| React Router DOM | 7.13.1 | Client-side routing |
-| ESLint | 9.39.3 | Code linting |
+| React | 19.2.0 | Core UI framework with StrictMode |
+| Vite | 7.3.1 | Fast build tool and dev server |
+| Tailwind CSS | 4.1.18 (@tailwindcss/vite) | Utility-first CSS with Vite plugin |
+| React Router DOM | 7.13.1 | BrowserRouter for SPA routing |
+| ESLint | 9.39.3 (flat config) | Modern linting configuration |
 
 ## 📋 Prerequisites
 
-Before you begin, ensure you have the following installed:
-
-- **Node.js** (v18 or higher recommended)
+- **Node.js** v18+
 - **npm** or **yarn**
 
 ## 🚀 Getting Started
 
-### 1. Clone the repository
+### 1. Clone
 
 ```bash
 git clone https://github.com/fhermas22/imen-clone.git
 cd imen-clone
 ```
 
-### 2. Install dependencies
+### 2. Install
 
 ```bash
 npm install
 ```
 
-### 3. Start the development server
+### 3. Dev Server
 
 ```bash
 npm run dev
 ```
 
-The application will be available at `http://localhost:5173`
+Open http://localhost:5173 (or assigned port).
 
-### 4. Build for production
+### 4. Build & Preview
 
 ```bash
 npm run build
-```
-
-### 5. Preview production build
-
-```bash
 npm run preview
 ```
 
@@ -78,92 +74,92 @@ npm run preview
 
 ```
 imen-clone/
-├── public/                          # Static assets
-│   └── favicon.ico                  # Website favicon
+├── public/
+│   └── favicon.ico
 ├── src/
 │   ├── assets/
-│   │   └── images/                  # Images, icons, logos, illustrations
-│   │       ├── background/          # Background images
-│   │       ├── icons/               # SVG icons
-│   │       ├── illustrations/       # Illustration images
-│   │       ├── logo/                # Logo images
-│   │       └── photos/              # Photography assets
+│   │   └── images/
+│   │       ├── icons/               # SVG icons (blue/white variants)
+│   │       ├── illustrations/
+│   │       │   ├── long.term.training/
+│   │       │   ├── continuing.education/
+│   │       │   └── other/           # our-students.jpg
+│   │       ├── logo/                # imen_logo.png/dark.png
+│   │       └── photos/              # imen-building.jpg etc.
+│   │       └── screenshots/         # home_page.png
 │   ├── components/
-│   │   ├── common/
-│   │   │   └── Button/              # Reusable button component
-│   │   ├── layout/
-│   │   │   └── Header/              # Header component with navbar
-│   │   │       └── components/
-│   │   │           ├── Navbar/      # Navigation bar
-│   │   │           └── NavItemDropdown/ # Dropdown menu items
+│   │   ├── common/Button/
+│   │   ├── layout/Header/
+│   │   │   └── components/
+│   │   │       ├── Navbar/
+│   │   │       └── NavItemDropdown/
 │   │   └── ui/
-│   │       ├── PillarCard/          # UI card component
-│   │       ├── SectionTitle/        # Section title component
-│   │       ├── StatsCounter/        # Animated statistics component
-│   │       ├── TrainingCard/        # Training card component
-│   │       └── ValuePoint/          # Value point component
-│   ├── pages/
-│   │   └── Home/                    # Home page
-│   ├── utils/
-│   │   └── style/                   # Global styles (app.css)
-│   ├── main.jsx                     # Application entry point with routing
-│   └── App.jsx                      # Root component (if used)
-├── index.html                       # HTML entry point
-├── package.json                     # Dependencies and scripts
-├── vite.config.js                    # Vite configuration
-├── eslint.config.js                  # ESLint configuration
-└── vercel.json                       # Vercel deployment configuration
+│   │       ├── PillarCard/
+│   │       ├── SectionTitle/
+│   │       ├── StatsCounter/
+│   │       ├── TrainingCard/
+│   │       └── ValuePoint/
+│   ├── datas/                       # Data arrays: pillarList.js etc.
+│   ├── pages/Home/
+│   ├── utils/style/app.css
+│   └── main.jsx                     # Entry + Router
+├── index.html
+├── package.json
+├── vite.config.js
+├── eslint.config.js
+└── vercel.json
 ```
 
-## 🎨 Available Scripts
+## 🎨 Scripts
 
 | Command | Description |
 |---------|-------------|
-| `npm run dev` | Start development server |
-| `npm run build` | Build for production |
-| `npm run preview` | Preview production build |
-| `npm run lint` | Run ESLint |
+| `npm run dev` | Dev server |
+| `npm run build` | Production build |
+| `npm run preview` | Preview build |
+| `npm run lint` | Lint code |
+
+## 🚀 Deployment (Vercel)
+
+1. Install Vercel CLI: `npm i -g vercel`
+2. `vercel` (follow prompts)
+3. Or push to GitHub + Vercel dashboard.
+
+Configures SPA rewrites + asset caching.
 
 ## 📸 Screenshots
 
-> *(Screenshots will be added as the project develops)*
+![Home Page](src/assets/screenshots/home_page.png)
 
-## 📝 Changelog / Recent Updates
+<div class=\"w-full md:w-1/2 mx-auto\">
 
-### Version 0.0.6 (Current)
+## 📝 Changelog
 
-- ✅ Added responsive header with navbar
-- ✅ Implemented dropdown navigation menus
-- ✅ Created hero section with background image
-- ✅ Built PillarCard reusable component
-- ✅ Added StatsCounter animated statistics component
-- ✅ Added SectionTitle reusable component
-- ✅ Added TrainingCard component for long-term formations section
-- ✅ Added ValuePoint component for "Why choose us?" section
-- ✅ Integrated React Router DOM for client-side routing
-- ✅ Set up Tailwind CSS v4 with Vite plugin
-
----
+### Version 0.0.7 (Current)
+- ✅ Full Home page with 6 data-driven sections
+- ✅ Added NavItemDropdown component
+- ✅ Complete datas/ (pillarList, longTrainingList, valuePointList, continuingEducationList)
+- ✅ Tailwind CSS v4 with @tailwindcss/vite plugin
+- ✅ vercel.json for deployment
+- ✅ eslint.config.js flat config
+- ✅ All UI components implemented & responsive
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+1. Fork & branch: `git checkout -b feature/xyz`
+2. Lint: `npm run lint`
+3. Commit: `git commit -m '..."`
+4. PR
 
 ## 📄 License
 
-This project is for educational purposes. The original IMeN website content belongs to **Institut des Métiers du Numérique**. Official website: https://imen.school
+Educational clone. Original © IMeN (https://imen.school)
 
 ---
 
-<div align="center">
+<div align=\"center\">
 
-### ✨ Built with ❤️ by [**@fhermas22**](https://github.com/fhermas22) using **React** & **Tailwind CSS** ✨
+✨ **Built by [@fhermas22](https://github.com/fhermas22)** ✨
 
 </div>
 
