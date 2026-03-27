@@ -6,7 +6,7 @@ import WebDesignIllustration from "../assets/images/illustrations/continuing.edu
 export const continuingEducationList = [
     {
         id: 1,
-        title: "Formation en Développement Web",
+        title: "Développement Web",
         description: "Cette formation est destinée aux personnes en quête d’emploi, en situation de transition professionnelle, aux adultes qui souhaitent approfondir leurs connaissances dans le domaine du Développement Web et obtenir un certificat.",
         imageSrc: WebDevelopmentIllustration,
     },
