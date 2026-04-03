@@ -6,9 +6,13 @@
     --color-primary: #1870b8;
     --color-secondary: #fda711;
 
+    /*====== Text Colors ======*/
+    --color-input-text: #999999;
+
     /*====== Border Colors ======*/
     --color-border: #f0f4f6;
     --color-input: #dedede;
+    --color-footer-border: #dedede;
 
     /*====== Background Colors ======*/
     --color-footer: #f7f7f7;
