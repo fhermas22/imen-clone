@@ -16,11 +16,13 @@ import LinkedinPrimary from "../../../assets/images/icons/linkedin-primary.svg";
 import LinkedinSecondary from "../../../assets/images/icons/linkedin-secondary.svg";
 
 function Footer() {
+    const currentYear = new Date().getFullYear();
+
     return (
-        <footer className="w-full pt-25 pb-10 bg-footer">
-            <div className="flex flex-col items-center justify-center gap-34 lg:flex-row lg:items-start">
+        <footer className="w-full flex flex-col pt-25 bg-footer">
+            <div className="flex flex-col items-center justify-center gap-40 mb-12 lg:flex-row lg:items-start">
                 {/* Logo */}
-                <img src={LogoDark} alt="Logo de l'IMeN" className="w-60"/>
+                <img src={LogoDark} alt="Logo de l'IMeN" className="w-62"/>
 
                 {/* Newsletter */}
                 <div className="flex flex-col items-start">
@@ -89,7 +91,7 @@ function Footer() {
                                 +229 01 95 92 23 45
                             </a>
                         </span>
-                        <span className="flex items-center justify-items-start gap-2">
+                        <span className="flex items-center jub-10stify-items-start gap-2">
                             <img src={EmailPrimary} alt="Icône d'email" width={26} height={26}/>
                             <p className="font-body text-primary text-sm font-medium">
                                 Email :
@@ -100,6 +102,13 @@ function Footer() {
                         </span>
                     </div>
                 </div>
+            </div>
+
+            {/* Copyright */}
+            <div className="flex items-center justify-center py-6 border-t border-footer-border">
+                <p className="font-body text-black text-sm">
+                    Copyright IMeN © {currentYear} | Tout droits réservés.
+                </p>
             </div>
         </footer>
     );
