@@ -98,6 +98,7 @@ function Home() {
                   description={training.description}
                   imageSrc={training.imageSrc}
                   category={training.category}
+                  link={'/training'}
                 />
               ))
             }
@@ -160,6 +161,7 @@ function Home() {
                   description={training.description}
                   imageSrc={training.imageSrc}
                   category={training.category}
+                  link={'/training'}
                 />
               ))
             }
