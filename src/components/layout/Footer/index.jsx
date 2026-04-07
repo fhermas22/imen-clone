@@ -40,7 +40,7 @@ function Footer() {
                             placeholder="Entrez votre adresse email" 
                             className="w-[60vw] font-body text-input-text text-xs bg-transparent border-none focus:outline-none focus:text-slate-800 xs:w-[65vw] md:w-[14vw] lg:w-[14vw]"
                         />
-                        <button type="submit" className="w-10 h-10 flex items-center justify-center bg-primary rounded-sm transition duration-500 ease-in-out hover:cursor-pointer active:scale-90">
+                        <button type="submit" className="w-10 h-10 flex items-center justify-center bg-primary rounded-sm transition duration-500 ease-in-out hover:bg-secondary hover:cursor-pointer active:scale-90">
                             <img src={ChevronRightWhite} alt="Soumettre" width={30} height={30}/>
                         </button>
                     </div>
