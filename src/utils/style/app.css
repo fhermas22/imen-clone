@@ -8,11 +8,13 @@
 
     /*====== Text Colors ======*/
     --color-input-text: #999999;
+    --color-box-text: #0c2e60;
 
     /*====== Border Colors ======*/
     --color-border: #f0f4f6;
     --color-input: #dedede;
     --color-footer-border: #dedede;
+    --color-box-border: #edeff2;
 
     /*====== Background Colors ======*/
     --color-footer: #f7f7f7;
