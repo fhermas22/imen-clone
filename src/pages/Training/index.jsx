@@ -23,7 +23,7 @@ function Training() {
                 </div>
             </section>
 
-            <div className="flex flex-row items-center justify-center py-14 px-50">
+            <div className="flex flex-row items-start justify-center gap-2 py-14 px-90">
                 {/*======== Section 2 : Training Main Details  ======== */}
                 <section id="section2" className="flex flex-col items-center">
                     {/*==== Sub-Section : Training Illustration Image ====*/}
@@ -48,8 +48,37 @@ function Training() {
                     </div>
                 </section>
 
-                {/*======== Section 3 : Side Box  ======== */}
-                <section id="section3"></section>
+                {/*======== Section 3 : Side Details Box  ======== */}
+                <section id="section3">
+                    <div className="flex flex-col items-center justify-center py-10 px-8 border border-box-border rounded-sm">
+                        <div className="w-75 flex flex-row items-center justify-between">
+                            <p className="font-body text-box-text text-base font-bold">
+                                Durée de la formation :
+                            </p>
+                            <span className="font-body text-box-text text-base font-bold uppercase">
+                                02 ans
+                            </span>
+                        </div>
+                        <div className="w-full h-0.5 bg-box-border my-4"></div>
+                        <div className="w-75 flex flex-row items-center justify-between">
+                            <p className="font-body text-box-text text-base font-bold">
+                                Scolarité :
+                            </p>
+                            <span className="font-body text-box-text text-base font-bold uppercase">
+                                1 000 000 FCFA
+                            </span>
+                        </div>
+                        <div className="w-full h-0.5 bg-box-border my-4"></div>
+                        <div className="w-75 flex flex-row items-center justify-between">
+                            <p className="font-body text-box-text text-base font-bold">
+                                Prochaine Rentrée :
+                            </p>
+                            <span className="font-body text-box-text text-base font-bold">
+                                24 Février 2025
+                            </span>
+                        </div>
+                    </div>
+                </section>
             </div>
         </main>
     );
