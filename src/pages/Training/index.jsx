@@ -1,5 +1,7 @@
 import HeroIllustration from "../../assets/images/illustrations/long.term.training/hero/it-programming.svg";
 import TrainingIllustration from "../../assets/images/illustrations/long.term.training/it-programming.jpg";
+import Button from "../../components/common/Button";
+import BoxDetail from "../../components/ui/BoxDetail";
 import TrainingDetail from "../../components/ui/TrainingDetail";
 
 function Training() {
@@ -51,31 +53,31 @@ function Training() {
                 {/*======== Section 3 : Side Details Box  ======== */}
                 <section id="section3">
                     <div className="flex flex-col items-center justify-center py-10 px-8 border border-box-border rounded-sm">
-                        <div className="w-75 flex flex-row items-center justify-between">
-                            <p className="font-body text-box-text text-base font-bold">
-                                Durée de la formation :
-                            </p>
-                            <span className="font-body text-box-text text-base font-bold uppercase">
-                                02 ans
-                            </span>
+                        {/*==== Sub-Section : Additional Details ====*/}
+                        <div>
+                            <BoxDetail
+                                title="Durée de la formation"
+                                value="2 ans"
+                            />
+                            <BoxDetail
+                                title="Scolarité"
+                                value="1 000 000 FCFA"
+                            />
+                            <BoxDetail
+                                title="Prochaine Rentrée"
+                                value="02 Mars 2026"
+                                valueUppercase={false}
+                            />
                         </div>
-                        <div className="w-full h-0.5 bg-box-border my-4"></div>
-                        <div className="w-75 flex flex-row items-center justify-between">
-                            <p className="font-body text-box-text text-base font-bold">
-                                Scolarité :
-                            </p>
-                            <span className="font-body text-box-text text-base font-bold uppercase">
-                                1 000 000 FCFA
-                            </span>
-                        </div>
-                        <div className="w-full h-0.5 bg-box-border my-4"></div>
-                        <div className="w-75 flex flex-row items-center justify-between">
-                            <p className="font-body text-box-text text-base font-bold">
-                                Prochaine Rentrée :
-                            </p>
-                            <span className="font-body text-box-text text-base font-bold">
-                                24 Février 2025
-                            </span>
+
+                        {/*==== Sub-Section : Action Buttons ====*/}
+                        <div className="w-full flex flex-col items-center gap-4 mt-6">
+                            <Button isPrimary={true} py={"py-1 xs:py-2.5 md:py-3"} textSize={"text-sm md:text-base"} hoverScale="hover:scale-106" className="w-full capitalize">
+                                Devenir étudiant
+                            </Button>
+                            <Button isPrimary={true} isDownload={true} href="src/assets/documents/imen-payment-terms-2024.png" py={"py-1 xs:py-2.5 md:py-3"} textSize={"text-sm md:text-base"} hoverScale="hover:scale-106" className="w-full capitalize">
+                                Télécharger les modalités
+                            </Button>
                         </div>
                     </div>
                 </section>
