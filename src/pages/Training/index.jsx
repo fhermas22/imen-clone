@@ -25,14 +25,21 @@ function Training() {
                 </div>
             </section>
 
-            <div className="flex flex-row items-start justify-center gap-2 py-14 px-90">
+            <div className="w-full flex flex-col gap-2 py-8 px-6 lg:flex-row lg:items-start lg:justify-center lg:py-14 lg:px-90">
                 {/*======== Section 2 : Training Main Details  ======== */}
                 <section id="section2" className="flex flex-col items-center">
                     {/*==== Sub-Section : Training Illustration Image ====*/}
-                    <img src={TrainingIllustration} alt="Image illustrant l'ambiance de la formation en Programmation Informatique" className="w-156 h-104 rounded-sm" />
+                    <div className="w-full flex items-center justify-start mb-4 md:justify-center lg:justify-start">
+                        <img 
+                            src={TrainingIllustration} 
+                            alt="Image illustrant l'ambiance de la formation en Programmation Informatique" 
+                            width={626} 
+                            height={417}
+                            className="rounded-sm" />
+                    </div>
 
                     {/*==== Sub-Section : Training Details ====*/}
-                    <div className="flex flex-col py-10">
+                    <div className="flex flex-col py-6 md:py-8 lg:py-10">
                         <TrainingDetail
                             title="Présentation"
                             description="La filière Programmation Informatique forme des professionnels capables de concevoir, développer et optimiser des logiciels, applications web et mobiles ainsi que des systèmes informatiques. Elle couvre les langages de programmation essentiels (comme Python, Java, C++, et JavaScript), les principes d’algorithmique, et les méthodes de développement collaboratif. Grâce à cette formation, les étudiants acquièrent des compétences en analyse et en résolution de problèmes techniques, en respectant les standards de qualité et de sécurité. Cette filière répond aux besoins croissants du marché pour des développeurs polyvalents et spécialisés, indispensables dans tous les secteurs du numérique."
@@ -52,7 +59,7 @@ function Training() {
 
                 {/*======== Section 3 : Side Details Box  ======== */}
                 <section id="section3">
-                    <div className="flex flex-col items-center justify-center py-10 px-8 border border-box-border rounded-sm">
+                    <div className="flex flex-col items-center justify-center py-10 px-6 border border-box-border rounded-sm lg:px-8">
                         {/*==== Sub-Section : Additional Details ====*/}
                         <div>
                             <BoxDetail
@@ -72,10 +79,10 @@ function Training() {
 
                         {/*==== Sub-Section : Action Buttons ====*/}
                         <div className="w-full flex flex-col items-center gap-4 mt-6">
-                            <Button isPrimary={true} py={"py-1 xs:py-2.5 md:py-3"} textSize={"text-sm md:text-base"} hoverScale="hover:scale-106" className="w-full capitalize">
+                            <Button isPrimary={true} py={"py-2 xs:py-2.5 md:py-3"} textSize={"text-sm md:text-base"} hoverScale="hover:scale-106" className="w-full capitalize">
                                 Devenir étudiant
                             </Button>
-                            <Button isPrimary={true} isDownload={true} href="src/assets/documents/imen-payment-terms-2024.png" py={"py-1 xs:py-2.5 md:py-3"} textSize={"text-sm md:text-base"} hoverScale="hover:scale-106" className="w-full capitalize">
+                            <Button isPrimary={true} isDownload={true} href="src/assets/documents/imen-payment-terms-2024.png" py={"py-2 xs:py-2.5 md:py-3"} textSize={"text-sm md:text-base"} hoverScale="hover:scale-106" className="w-full capitalize">
                                 Télécharger les modalités
                             </Button>
                         </div>

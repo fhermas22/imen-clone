@@ -10,7 +10,7 @@ function TrainingDetail({title, description, hasTopBorder = false, hasBottomBord
             </h3>
 
             {/* Detail Description */}
-            <p className="font-body text-black text-lg leading-8">
+            <p className="font-body text-black text-base leading-8 md:text-lg">
                 {description}
             </p>
 

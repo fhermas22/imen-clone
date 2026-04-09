@@ -1,11 +1,11 @@
 function BoxDetail({title, value, valueUppercase = true, hasBottomBorder = true}) {
     return (
         <div>
-            <div className="w-75 flex flex-row items-center justify-between">
-                <p className="font-body text-box-text text-base font-bold">
+            <div className="w-[70vw] flex flex-row items-center justify-between md:w-[84vw] lg:w-[16vw]">
+                <p className="font-body text-box-text text-sm font-bold lg:text-base">
                     {title} :
                 </p>
-                <span className="font-body text-box-text text-base font-bold">
+                <span className="font-body text-box-text text-sm font-bold lg:text-base">
                     {valueUppercase ? value.toUpperCase() : value}
                 </span>
             </div>
