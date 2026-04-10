@@ -3,6 +3,7 @@ import TrainingIllustration from "../../assets/images/illustrations/long.term.tr
 import Button from "../../components/common/Button";
 import BoxDetail from "../../components/ui/BoxDetail";
 import TrainingDetail from "../../components/ui/TrainingDetail";
+import ImenPaymentTerms from "../../assets/documents/imen-payment-terms-2024.png";
 
 function Training() {
     return (
@@ -82,7 +83,7 @@ function Training() {
                             <Button isPrimary={true} py={"py-2 xs:py-2.5 md:py-3"} textSize={"text-sm md:text-base"} hoverScale="hover:scale-106" className="w-full capitalize">
                                 Devenir étudiant
                             </Button>
-                            <Button isPrimary={true} isDownload={true} href="src/assets/documents/imen-payment-terms-2024.png" py={"py-2 xs:py-2.5 md:py-3"} textSize={"text-sm md:text-base"} hoverScale="hover:scale-106" className="w-full capitalize">
+                            <Button isPrimary={true} isDownload={true} href={ImenPaymentTerms} py={"py-2 xs:py-2.5 md:py-3"} textSize={"text-sm md:text-base"} hoverScale="hover:scale-106" className="w-full capitalize">
                                 Télécharger les modalités
                             </Button>
                         </div>
