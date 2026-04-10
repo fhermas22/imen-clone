@@ -10,9 +10,8 @@ import HeroPhoto from "../../assets/images/photos/imen-building.jpg";
 import OurStudents from "../../assets/images/illustrations/other/our-students.jpg";
 {/*== Data Imports  == */}
 import { pillarList } from "../../datas/pillarList";
-import { longTrainingList } from "../../datas/longTrainingList";
+import { trainingList } from "../../datas/trainingList";
 import { valuePointList } from "../../datas/valuePointList";
-import { continuingEducationList } from "../../datas/continuingEducationList";
 
 function Home() {
   return (
@@ -91,13 +90,13 @@ function Home() {
           {/*==== Sub-Section : Training Cards ====*/}
           <div className="flex flex-col items-stretch justify-center gap-8 md:grid md:grid-cols-2 md:grid-rows-2 lg:flex lg:flex-row">
             {
-              longTrainingList.map(training => (
+              trainingList.filter(t => t.departement !== null).map(training => (
                 <TrainingCard 
                   key={training.id}
                   title={training.title}
                   description={training.description}
-                  imageSrc={training.imageSrc}
-                  category={training.category}
+                  imageSrc={training.illustration}
+                  category={training.label}
                   link={'/training'}
                 />
               ))
@@ -154,13 +153,13 @@ function Home() {
           {/*==== Sub-Section : Training Cards ====*/}
           <div className="flex flex-col items-stretch justify-center gap-8 md:grid md:grid-cols-2 md:grid-rows-2 lg:flex lg:flex-row">
             {
-              continuingEducationList.map(training => (
+              trainingList.filter(t => t.departement === null).map(training => (
                 <TrainingCard 
                   key={training.id}
                   title={training.title}
                   description={training.description}
-                  imageSrc={training.imageSrc}
-                  category={training.category}
+                  imageSrc={training.illustration}
+                  category={training.label}
                   link={'/training'}
                 />
               ))
