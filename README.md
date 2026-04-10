@@ -5,7 +5,7 @@
 [![React](https://img.shields.io/badge/React-19.2.0-blue?style=for-the-badge&logo=react)](https://react.dev)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.1-38bdf8?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com)
 [![Vite](https://img.shields.io/badge/Vite-7.3-646CFF?style=for-the-badge&logo=vite)](https://vite.dev)
-[![Version](https://img.shields.io/badge/Version-0.1.8-green?style=flat-square)](https://github.com/fhermas22/imen-clone)
+[![Version](https://img.shields.io/badge/Version-0.2.11-green?style=flat-square)](https://github.com/fhermas22/imen-clone)
 [![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel)](https://vercel.com)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
@@ -22,9 +22,10 @@
 - **Long-term Formations** — 3 TrainingCards (Programmation Informatique, Motion Design, Big Data & IA)
 - **Why Choose Us** — ValuePoint list (4 points) with illustration and CTA
 - **Continuing Education** — 3 TrainingCards (Dev Web, Maintenance Informatique, Web Design)
-- **Component-Based & Data-Driven** — Reusable UI components + datas/*.js
+- **Training Page** — /training route with TrainingDetail and BoxDetail components
 - **Footer & Social Links** — Responsive Footer with SocialLink components (Facebook, Instagram, Twitter/X, LinkedIn)
-- **Component-Based & Data-Driven** — Reusable UI components driven by src/datas/ (pillarList.js, longTrainingList.js, valuePointList.js, continuingEducationList.js)
+- **Component-Based & Data-Driven** — Reusable UI components driven by src/datas/ (pillarList.js, trainingList.js, valuePointList.js)
+- **ScrollToTop Utility** — Smooth scrolling on page navigation
 - **Client-Side Routing** — React Router DOM ready
 
 ## 🛠️ Tech Stack
@@ -106,15 +107,19 @@ imen-clone/
 │   │       ├── SectionTitle/
 │   │       ├── StatsCounter/
 │   │       ├── TrainingCard/
+│   │       ├── TrainingDetail/
+│   │       ├── BoxDetail/
 │   │       └── ValuePoint/
 │   ├── datas/
 │   │   ├── pillarList.js               # 3 pillars data
-│   │   ├── longTrainingList.js         # 3 long-term trainings
-│   │   ├── valuePointList.js           # 4 value points
-│   │   └── continuingEducationList.js  # 3 continuing education
+│   │   ├── trainingList.js             # All trainings (long-term + continuing)
+│   │   └── valuePointList.js           # 4 value points
 │   ├── pages/
-│   │   └── Home/
+│   │   ├── Home/
+│   │   └── Training/
 │   ├── utils/
+│   │   ├── scripts/
+│   │   │   └── ScrollToTop.jsx
 │   │   └── style/
 │   │       └── app.css
 │   └── main.jsx                        # App entry + Router setup
@@ -150,14 +155,21 @@ Configures SPA rewrites + asset caching.
 
 ## 📝 Changelog
 
-### Version 0.0.7 (Current)
+### Version 0.0.7
 - ✅ Full Home page with 6 data-driven sections
 - ✅ Added NavItemDropdown component
-- ✅ Complete datas/ (pillarList, longTrainingList, valuePointList, continuingEducationList)
+- ✅ Initial datas/ setup
 - ✅ Tailwind CSS v4 with @tailwindcss/vite plugin
 - ✅ vercel.json for deployment
 - ✅ eslint.config.js flat config
-- ✅ All UI components implemented & responsive
+- ✅ All Home UI components implemented & responsive
+
+### Version 0.2.11 (Current)
+- ✅ Added Training page (/training) with responsive listing
+- ✅ New TrainingDetail and BoxDetail UI components
+- ✅ trainingList.js data (consolidated long-term + continuing education)
+- ✅ ScrollToTop.jsx utility for smooth navigation
+- ✅ Updated project structure and datas/
 
 ## 🤝 Contributing
 
