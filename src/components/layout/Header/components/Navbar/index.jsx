@@ -3,6 +3,7 @@ import Logo from "../../../../../assets/images/logo/imen_logo.png";
 import MenuWhite from "../../../../../assets/images/icons/menu-white.svg";
 import CloseWhite from "../../../../../assets/images/icons/close-white.svg";
 import NavItemDropdown from "../NavItemDropdown";
+import { Link } from "react-router-dom";
 
 function Navbar() {
 
@@ -33,7 +34,9 @@ function Navbar() {
         `}>
             {/* Logo */}
             <div>
-                <img className="w-40 mr-[30vw] md:mr-[60vw] lg:mr-10" src={Logo} alt="Logo de l'IMeN" />
+                <Link to="/">
+                    <img className="w-40 mr-[30vw] md:mr-[60vw] lg:mr-10" src={Logo} alt="Logo de l'IMeN" />
+                </Link>
             </div>
 
             {/* Menu Options */}
@@ -63,7 +66,7 @@ function Navbar() {
             `}>
                 <ul className="flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-[2vw]">
                     <li>
-                        <a className="text-primary font-title font-medium hover:text-secondary transition duration-300" href="#">Accueil</a>
+                        <Link className="text-primary font-title font-medium hover:text-secondary transition duration-300" to="/">Accueil</Link>
                     </li>
 
                     {/* Dropdown : Discover IMeN */}
