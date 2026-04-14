@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 
-function TrainingCard({ title, description, imageSrc, link, category, categoryLink }) {
+function TrainingCard({ id, title, description, imageSrc, category, categoryLink }) {
   return (
     <div className="w-full flex flex-col border-2 border-border rounded-md overflow-hidden lg:w-100">
         {/* Training Illustration */}
-        <Link to={link}>
+        <Link to={`/training/${id}`}>
             <img 
               src={imageSrc}
               alt={`Image illustrant la formation ${title}`} 
@@ -26,7 +26,7 @@ function TrainingCard({ title, description, imageSrc, link, category, categoryLi
             )}
 
             {/* Training Title */}
-            <Link to={link} className={`font-title text-primary text-xl font-semibold uppercase pb-3 hover:text-secondary transition duration-500 ease-in-out ${category == null ? "pt-0" : "pt-5"}`}>
+            <Link to={`/training/${id}`} className={`font-title text-primary text-xl font-semibold uppercase pb-3 hover:text-secondary transition duration-500 ease-in-out ${category == null ? "pt-0" : "pt-5"}`}>
                 {title}
             </Link>
 
