@@ -1,3 +1,5 @@
+import { useParams } from "react-router-dom";
+
 import HeroIllustration from "../../assets/images/illustrations/long.term.training/hero/it-programming.svg";
 import TrainingIllustration from "../../assets/images/illustrations/long.term.training/it-programming.jpg";
 import Button from "../../components/common/Button";
@@ -5,7 +7,17 @@ import BoxDetail from "../../components/ui/BoxDetail";
 import TrainingDetail from "../../components/ui/TrainingDetail";
 import ImenPaymentTerms from "../../assets/documents/imen-payment-terms-2024.png";
 
+import { trainingList } from "../../datas/trainingList";
+
 function Training() {
+    const { id } = useParams();
+
+    const training = trainingList.find((f) => f.id === parseInt(id));
+
+    if (!training) {
+        return <h2>Formation introuvable</h2>;
+    }
+
     return (
         <main>
             {/*======== Section 1 : Title Hero  ======== */}
@@ -21,7 +33,7 @@ function Training() {
                 {/*==== Sub-Section : Training Title ====*/}
                 <div className="absolute inset-0 bg-black/80 flex items-center justify-center">
                     <h1 className="font-title text-white text-3xl font-semibold uppercase text-center px-2 xs:text-[32px] md:text-[40px] lg:text-[50px]">
-                        Programmation Informatique
+                        {training.title}
                     </h1>
                 </div>
             </section>
@@ -32,7 +44,7 @@ function Training() {
                     {/*==== Sub-Section : Training Illustration Image ====*/}
                     <div className="w-full flex items-center justify-start mb-4 md:justify-center lg:justify-start">
                         <img 
-                            src={TrainingIllustration} 
+                            src={training.illustration} 
                             alt="Image illustrant l'ambiance de la formation en Programmation Informatique" 
                             width={626} 
                             height={417}
@@ -43,12 +55,12 @@ function Training() {
                     <div className="flex flex-col py-6 md:py-8 lg:py-10">
                         <TrainingDetail
                             title="Présentation"
-                            description="La filière Programmation Informatique forme des professionnels capables de concevoir, développer et optimiser des logiciels, applications web et mobiles ainsi que des systèmes informatiques. Elle couvre les langages de programmation essentiels (comme Python, Java, C++, et JavaScript), les principes d’algorithmique, et les méthodes de développement collaboratif. Grâce à cette formation, les étudiants acquièrent des compétences en analyse et en résolution de problèmes techniques, en respectant les standards de qualité et de sécurité. Cette filière répond aux besoins croissants du marché pour des développeurs polyvalents et spécialisés, indispensables dans tous les secteurs du numérique."
+                            description={training.presentation}
                             hasBottomBorder={true}
                         />
                         <TrainingDetail
                             title="Débouchés"
-                            description="En choisissant ce parcours de formation, vous pouvez exercer plusieurs métiers dont entre autres : Développeur web ; Développeur d’applications mobiles; Développeur logiciel ; Ingénieur DevOps; Ingénieur système et réseaux ; Analyste programmeur; Consultant en technologie."
+                            description={training.openings}
                             hasBottomBorder={true}
                         />
                         <TrainingDetail
@@ -65,15 +77,15 @@ function Training() {
                         <div>
                             <BoxDetail
                                 title="Durée de la formation"
-                                value="2 ans"
+                                value={training.duration}
                             />
                             <BoxDetail
                                 title="Scolarité"
-                                value="1 000 000 FCFA"
+                                value={training.cost}
                             />
                             <BoxDetail
                                 title="Prochaine Rentrée"
-                                value="02 Mars 2026"
+                                value={training.beginning}
                                 valueUppercase={false}
                             />
                         </div>
