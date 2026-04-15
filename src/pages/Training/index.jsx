@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
 
 import HeroIllustration from "../../assets/images/illustrations/long.term.training/hero/it-programming.svg";
-import TrainingIllustration from "../../assets/images/illustrations/long.term.training/it-programming.jpg";
 import Button from "../../components/common/Button";
 import BoxDetail from "../../components/ui/BoxDetail";
 import TrainingDetail from "../../components/ui/TrainingDetail";
@@ -52,21 +51,44 @@ function Training() {
                     </div>
 
                     {/*==== Sub-Section : Training Details ====*/}
-                    <div className="flex flex-col py-6 md:py-8 lg:py-10">
+                    <div className="flex flex-col pt-6 md:pt-8 lg:pt-10">
                         <TrainingDetail
                             title="Présentation"
                             description={training.presentation}
                             hasBottomBorder={true}
                         />
+                        {training.goals && (
+                            <TrainingDetail
+                                title="Objectifs de la formation"
+                                subDetails={training.goals}
+                                hasBottomBorder={true}
+                                isGoal={true}
+                            />
+                        )}
                         <TrainingDetail
-                            title="Débouchés"
+                            title={training.departement == null ? "Débouchés et Compétences Acquises" : "Débouchés"}
                             description={training.openings}
                             hasBottomBorder={true}
                         />
+                        {training.target_audience && (
+                            <TrainingDetail
+                                title="Public Cible"
+                                description={training.target_audience}
+                                hasBottomBorder={true}
+                            />
+                        )}
                         <TrainingDetail
                             title="Matériel requis"
-                            description="Ordinateur portable ; Clé USB ou disque dur externe ; Rallonge Multi-prise"
+                            subDetails={training.materials}
+                            isMaterial={true}
+                            hasBottomBorder={training.preview ? true : false}
                         />
+                        {training.preview && (
+                            <TrainingDetail
+                                title="Aperçu de la formation"
+                                description={training.preview}
+                            />
+                        )}
                     </div>
                 </section>
 
