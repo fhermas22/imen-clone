@@ -1,7 +1,8 @@
 import DiamondPrimary from "../../../assets/images/icons/diamond-primary.svg";
 import TargetPrimary from "../../../assets/images/icons/target-objective-primary.svg";
+import BriefcasePrimary from "../../../assets/images/icons/briefcase-fill-primary.svg";
 
-function TrainingDetail({title, description, subDetails, hasTopBorder = false, hasBottomBorder = false, isGoal = false, isMaterial = false}) {
+function TrainingDetail({title, description, subDetails, hasTopBorder = false, hasBottomBorder = false, isGoal = false, isOpening = false, isMaterial = false}) {
     return (
         <div className="pb-8">
             {/* Top Border */}
@@ -25,9 +26,9 @@ function TrainingDetail({title, description, subDetails, hasTopBorder = false, h
                     {subDetails.map((detail, index) => (
                         <div key={index} className="flex flex-row items-center gap-4 mb-4">
                             <img 
-                                src={isGoal ? TargetPrimary : isMaterial ? DiamondPrimary : null}
-                                alt={isGoal ? "Icône d'objectif" : isMaterial ? "Icône de matériel" : "Icône de détail"} 
-                                width={isGoal ? 16 : isMaterial ? 10 : 0} 
+                                src={isGoal ? TargetPrimary : isOpening ? DiamondPrimary : isMaterial ? BriefcasePrimary : null}
+                                alt={isGoal ? "Icône d'objectif" : isOpening ? "Icône d'ouverture" : isMaterial ? "Icône de matériel" : "Icône de détail"} 
+                                width={isGoal ? 16 : isOpening ? 10 : isMaterial ? 16 : 0} 
                                 className="" 
                             />
                             <p className="font-body text-black text-base leading-6 md:text-lg">
