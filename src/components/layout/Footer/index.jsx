@@ -84,7 +84,7 @@ function Footer() {
                             <p className="font-body text-primary text-sm font-medium md:text-xs lg:text-sm">
                                 Adresse :
                             </p>
-                            <a href="https://share.google/jI4xVsooBskwFc7iA" target="_blank" rel="noopener noreferrer" className="font-body text-black text-xs xs:text-sm md:text-xs lg:text-sm">
+                            <a href="https://maps.app.goo.gl/7Mp5ZXMZme7dCzrT7?g_st=aw" target="_blank" rel="noopener noreferrer" className="font-body text-black text-xs xs:text-sm md:text-xs lg:text-sm">
                                 Bénin, Cotonou, Vedoko, BP 1250
                             </a>
                         </span>
