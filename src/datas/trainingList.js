@@ -1,11 +1,11 @@
 /*== Photo & Illustration Imports  == */
-import BigDataIAIllustration from "../assets/images/illustrations/long.term.training/big-data-ai.jpg";
-import ItProgrammingIllustration from "../assets/images/illustrations/long.term.training/it-programming.jpg";
-import MotionDesignIllustration from "../assets/images/illustrations/long.term.training/motion-design.jpg";
-import WebDevelopmentIllustration from "../assets/images/illustrations/continuing.education/web-development.jpeg";
-import DataAnalysisIllustration from "../assets/images/illustrations/continuing.education/data-analysis.jpeg";
-import ComputerMaintenanceIllustration from "../assets/images/illustrations/continuing.education/computer-maintenance.jpeg";
-import WebDesignIllustration from "../assets/images/illustrations/continuing.education/web-design.jpeg";
+import BigDataIAIllustration from "../assets/images/illustrations/long.term.training/big-data-ai.webp";
+import ItProgrammingIllustration from "../assets/images/illustrations/long.term.training/it-programming.webp";
+import MotionDesignIllustration from "../assets/images/illustrations/long.term.training/motion-design.webp";
+import WebDevelopmentIllustration from "../assets/images/illustrations/continuing.education/web-development.webp";
+import DataAnalysisIllustration from "../assets/images/illustrations/continuing.education/data-analysis.webp";
+import ComputerMaintenanceIllustration from "../assets/images/illustrations/continuing.education/computer-maintenance.webp";
+import WebDesignIllustration from "../assets/images/illustrations/continuing.education/web-design.webp";
 
 export const trainingList = [
   // Long-term Trainings

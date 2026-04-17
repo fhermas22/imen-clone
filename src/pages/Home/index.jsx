@@ -6,8 +6,8 @@ import SectionTitle from "../../components/ui/SectionTitle";
 import TrainingCard from "../../components/ui/TrainingCard";
 import ValuePoint from "../../components/ui/ValuePoint";
 {/*== Photo & Illustration Imports  == */}
-import HeroPhoto from "../../assets/images/photos/imen-building.jpg";
-import OurStudents from "../../assets/images/illustrations/other/our-students.jpg";
+import HeroPhoto from "../../assets/images/photos/imen-building.webp";
+import OurStudents from "../../assets/images/illustrations/other/our-students.webp";
 {/*== Data Imports  == */}
 import { pillarList } from "../../datas/pillarList";
 import { trainingList } from "../../datas/trainingList";
