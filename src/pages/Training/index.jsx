@@ -5,7 +5,7 @@ import Button from "../../components/common/Button";
 import BoxDetail from "../../components/ui/BoxDetail";
 import TrainingDetail from "../../components/ui/TrainingDetail";
 {/*== Illustration & Docs Imports  == */}
-import HeroIllustration from "../../assets/images/illustrations/long.term.training/hero/long-term-training-hero.svg";
+import HeroIllustration from "../../assets/images/illustrations/trainings/long.term.training/hero/long-term-training-hero.svg";
 import ImenPaymentTerms from "../../assets/documents/imen-payment-terms-2024.png";
 {/*== Icons Imports  == */}
 import LinkBrokenPrimary from "../../assets/images/icons/link-broken-primary.svg";
@@ -29,7 +29,7 @@ function Training() {
 
     if (!training) {
         return (
-            <main className="w-full min-h-screen flex flex-col items-center justify-center p-8 xs:p-12 md:p-16 lg:p-24 bg-gradient-to-br from-white to-gray-50">
+            <main className="w-full min-h-screen flex flex-col items-center justify-center p-8 xs:p-12 md:p-16 lg:p-24 bg-linear-to-br from-white to-gray-50">
                 <img
                     src={LinkBrokenPrimary}
                     alt="Icône d'erreur 404 - Formation non trouvée"
