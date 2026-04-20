@@ -10,6 +10,7 @@ import Footer from './components/layout/Footer/index.jsx';
 {/*== Page Imports  == */}
 import Home from './pages/Home/index.jsx'
 import Training from './pages/Training/index.jsx';
+import Department from './pages/Department/index.jsx';
 import Error from './pages/Error/index.jsx';
 
 createRoot(document.getElementById('root')).render(
@@ -20,6 +21,7 @@ createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/training/:id" element={<Training />} />
+        <Route path="/department" element={<Department />} />
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
