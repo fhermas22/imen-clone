@@ -103,6 +103,7 @@ function Home() {
                   description={training.description}
                   imageSrc={training.illustration}
                   category={training.label}
+                  categoryLink={training.departement == "Département Numérique" ? `/department/numerique` : `/department/design`}
                 />
               ))
             }
@@ -166,6 +167,7 @@ function Home() {
                   description={training.description}
                   imageSrc={training.illustration}
                   category={training.label}
+                  categoryLink={training.departement == null ? `/department/continuing-education` : null}
                 />
               ))
             }

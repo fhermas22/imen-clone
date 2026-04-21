@@ -84,10 +84,9 @@ function Navbar() {
                     <NavItemDropdown 
                         title="Nos Formations" 
                         items={[
-                            { label: "Département Numérique", link: "/department" },
-                            { label: "Département Design", link: "/department" },
-                            { label: "Département Audiovisuel", link: "#" },
-                            { label: "Formations Continues", link: "/department" },
+                            { label: "Département Numérique", link: "/department/numerique" },
+                            { label: "Département Design", link: "/department/design" },
+                            { label: "Formations Continues", link: "/department/continuing-education" },
                             { label: "Workshops & Ateliers", link: "#" },
                         ]} 
                     />
