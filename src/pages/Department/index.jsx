@@ -2,6 +2,7 @@
 import { useParams } from "react-router-dom";
 import TrainingCard from "../../components/ui/TrainingCard";
 import Button from "../../components/common/Button";
+import ErrorNotFound from "../../components/common/ErrorNotFound/index.jsx";
 /*== Illustration Imports  == */
 import DigitalHero from "../../assets/images/illustrations/trainings/long.term.training/hero/digital-department-hero.svg";
 import DesignHero from "../../assets/images/illustrations/trainings/long.term.training/hero/design-department-hero.svg";
@@ -42,22 +43,14 @@ function Department() {
 
     if (!config) {
         return (
-            <main className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4">
-                <div className="max-w-md w-full bg-white rounded-lg shadow-xl p-8 text-center">
-                    <h1 className="text-4xl md:text-5xl font-title font-bold text-gray-900 mb-6 uppercase">
-                        404
-                    </h1>
-                    <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">
-                        Département non trouvé
-                    </h2>
-                    <p className="text-gray-600 mb-8 text-lg">
-                        Le département demandé n'existe pas.
-                    </p>
-                    <Button to="/" isPrimary>
-                        Retour à l'accueil
-                    </Button>
-                </div>
-            </main>
+            <ErrorNotFound 
+                title="404"
+                subtitle="Département non trouvé"
+                description="Le département demandé n'existe pas."
+                redirectTo="/"
+                redirectText="Retour à l'accueil"
+                countdown={5}
+            />
         );
     }
 
