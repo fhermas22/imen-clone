@@ -4,11 +4,12 @@ import { useParams } from "react-router-dom";
 import Button from "../../components/common/Button";
 import BoxDetail from "../../components/ui/BoxDetail";
 import TrainingDetail from "../../components/ui/TrainingDetail";
+import ErrorNotFound from "../../components/common/ErrorNotFound/index.jsx";
 {/*== Illustration & Docs Imports  == */}
 import HeroIllustration from "../../assets/images/illustrations/trainings/long.term.training/hero/long-term-training-hero.svg";
 import ImenPaymentTerms from "../../assets/documents/imen-payment-terms-2024.png";
 {/*== Icons Imports  == */}
-import ErrorNotFound from "../../components/common/ErrorNotFound/index.jsx";
+import PageNotFoundPrimary from "../../assets/images/icons/page-not-found-primary.svg";
 {/*== Data Imports  == */}
 import { trainingList } from "../../datas/trainingList";
 
@@ -28,6 +29,9 @@ function Training() {
                 description="La formation demandée n'existe pas ou l'ID est incorrect."
                 redirectTo="/"
                 redirectText="Retour à l'accueil"
+                iconSrc={PageNotFoundPrimary}
+                iconSize="w-80 h-80"
+                iconMarginBottom="mb-1 xs:mb-2 md:mb-3"
                 countdown={5}
             />
         );
