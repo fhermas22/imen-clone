@@ -1,10 +1,19 @@
-/*== Photo & Illustration Imports  == */
+/*== Photo & Illustration Imports  ==*/
+/* Long-Term Training Illustrations */
 import BigDataIAIllustration from "../assets/images/illustrations/trainings/long.term.training/digital.department/big-data-ai.webp";
 import ItProgrammingIllustration from "../assets/images/illustrations/trainings/long.term.training/digital.department/it-programming.webp";
+import ItSecurityIllustration from "../assets/images/illustrations/trainings/long.term.training/digital.department/it-security.webp";
+import CybersecurityIllustration from "../assets/images/illustrations/trainings/long.term.training/digital.department/cybersecurity.webp";
+import ItInstallationAndMaintenanceIllustration from "../assets/images/illustrations/trainings/long.term.training/digital.department/it-installation-and-maintenance.webp";
+import WebAndMobileDevelopmentIllustration from "../assets/images/illustrations/trainings/long.term.training/digital.department/web-and-mobile-development.webp";
 import MotionDesignIllustration from "../assets/images/illustrations/trainings/long.term.training/design.department/motion-design.webp";
+import UiUxDesignIllustration from "../assets/images/illustrations/trainings/long.term.training/design.department/ui-ux-design.webp";
+/* Continuing Education Training Illustrations */
 import WebDevelopmentIllustration from "../assets/images/illustrations/trainings/continuing.education/web-development.webp";
 import DataAnalysisIllustration from "../assets/images/illustrations/trainings/continuing.education/data-analysis.webp";
 import ComputerMaintenanceIllustration from "../assets/images/illustrations/trainings/continuing.education/computer-maintenance.webp";
+import VideoEditingIllustration from "../assets/images/illustrations/trainings/continuing.education/video-editing.webp";
+import GraphicDesignIllustration from "../assets/images/illustrations/trainings/continuing.education/graphic-design.webp";
 import WebDesignIllustration from "../assets/images/illustrations/trainings/continuing.education/web-design.webp";
 
 export const trainingList = [
@@ -70,7 +79,7 @@ export const trainingList = [
     id: 3,
     title: "Sécurité Informatique",
     description: "La filière Sécurité Informatique forme des spécialistes capables de protéger les systèmes d'information, les réseaux et les données contre les cybermenaces.",
-    illustration: ItProgrammingIllustration,
+    illustration: ItSecurityIllustration,
     departement: "Département Numérique",
     label: "Pôle Numérique",
     presentation: "La filière Sécurité Informatique forme des spécialistes capables de protéger les systèmes d'information, les réseaux et les données contre les cybermenaces. Elle couvre les domaines de la cybersécurité, de la cryptographie, de l'analyse de risques, ainsi que des techniques de défense et de réponse aux incidents. Cette formation enseigne aux étudiants comment détecter, analyser et contrer les menaces de sécurité tout en assurant la confidentialité, l'intégrité et la disponibilité des informations. Dans un contexte de hausse des cyberattaques, cette filière est essentielle pour garantir la sécurité des entreprises et des organisations.",
@@ -100,7 +109,7 @@ export const trainingList = [
     id: 4,
     title: "Cybersécurité",
     description: "La filière Cybersécurité forme des experts de la défense numérique capable d'anticiper les attaques, de sécuriser les infrastructures critiques et de répondre aux incidents de sécurité en temps réel.",
-    illustration: ItProgrammingIllustration,
+    illustration: CybersecurityIllustration,
     departement: "Département Numérique",
     label: "Pôle Numérique",
     presentation: "La formation en Cybersécurité est conçue pour transformer les étudiants en véritables remparts contre la cybercriminalité. Ce cursus intensif se concentre sur la mise en œuvre de stratégies de défense avancées, la surveillance des réseaux via les SOC (Security Operations Center), et la gestion des vulnérabilités. Vous apprendrez à maîtriser les outils de détection d'intrusion, à mener des investigations numériques (forensics) et à élaborer des plans de continuité d'activité. L'objectif est de former des profils opérationnels capables d'évoluer dans un paysage technologique où la menace est constante, en alliant compétences techniques pointues et conformité réglementaire.",
@@ -129,7 +138,7 @@ export const trainingList = [
     id: 5,
     title: "Installation et Maintenance Informatique",
     description: "La filière Installation et Maintenance Informatique forme des techniciens qualifiés pour assurer la mise en place, la configuration, l'entretien et la réparation des systèmes informatiques et réseaux.",
-    illustration: ItProgrammingIllustration,
+    illustration: ItInstallationAndMaintenanceIllustration,
     departement: "Département Numérique",
     label: "Pôle Numérique",
     presentation: "La filière Installation et Maintenance Informatique forme des techniciens qualifiés pour assurer la mise en place, la configuration, l'entretien et la réparation des systèmes informatiques et réseaux. Elle couvre les aspects techniques du matériel (hardware), les logiciels (software), ainsi que la gestion des réseaux et des périphériques. Les étudiants apprennent à diagnostiquer et résoudre des pannes, à effectuer des installations et des mises à jour, et à garantir le bon fonctionnement des infrastructures informatiques. Cette formation est essentielle pour soutenir les entreprises et organisations dans la continuité de leurs opérations informatiques.",
@@ -158,7 +167,7 @@ export const trainingList = [
     id: 6,
     title: "Developpement Web & Mobile",
     description: "La filière Développement Web & Mobile forme des professionnels capables de concevoir, développer et maintenir des applications web et mobiles performantes et sécurisées.",
-    illustration: ItProgrammingIllustration,
+    illustration: WebAndMobileDevelopmentIllustration,
     departement: "Département Numérique",
     label: "Pôle Numérique",
     presentation: "La filière Développement Web & Mobile forme des professionnels capables de concevoir, développer et maintenir des applications web et mobiles performantes et sécurisées. Elle couvre les principaux langages et frameworks (HTML, CSS, JavaScript, React, Flutter, etc.), les bases de données, ainsi que les techniques de design UX/UI. Les étudiants apprennent à créer des applications dynamiques, intuitives et adaptées aux besoins des utilisateurs sur diverses plateformes. Cette formation répond aux exigences croissantes du marché du numérique, où les solutions en ligne et mobiles sont omniprésentes.",
@@ -216,7 +225,7 @@ export const trainingList = [
     id: 8,
     title: "Design UI/UX",
     description: "Le Design UI/UX (Interface Utilisateur / Expérience Utilisateur) est un domaine en plein essor, centré sur la création de produits numériques intuitifs et esthétiques.",
-    illustration: MotionDesignIllustration,
+    illustration: UiUxDesignIllustration,
     departement: "Département Design",
     label: "Pôle Design",
     presentation: "Le Design UI/UX (Interface Utilisateur / Expérience Utilisateur) est un domaine en plein essor, centré sur la création de produits numériques intuitifs et esthétiques. Les designers UI/UX s'assurent que les interfaces des applications et sites web sont non seulement visuellement attrayantes, mais aussi faciles à naviguer pour offrir une expérience utilisateur optimale.",
@@ -337,7 +346,7 @@ export const trainingList = [
     id: 12,
     title: "Montage Vidéo",
     description: "Cette formation est destinée aux personnes en quête d’emploi, en situation de transition professionnelle, aux adultes qui souhaitent approfondir leurs connaissances dans le domaine du Montage Vidéo et obtenir un certificat.",
-    illustration: WebDevelopmentIllustration,
+    illustration: VideoEditingIllustration,
     departement: null,
     label: null,
     presentation: "Cette formation est destinée aux personnes en quête d’emploi, en situation de transition professionnelle, aux adultes qui souhaitent approfondir leurs connaissances dans le domaine de la Maintenance Informatique et obtenir un certificat. La formation en Montage Vidéo permet aux participants d’acquérir les compétences de base pour réaliser des vidéos professionnelles. Elle couvre les principes du montage, la gestion des séquences, l'ajout d'effets visuels et sonores, et l'exportation de projets finalisés. Les participants apprendront à manipuler les outils de montage, à structurer des récits visuels et à intégrer des effets et transitions pour des vidéos dynamiques et captivantes. Elle permet d’acquérir les armes nécessaires en termes de compétences, d’aptitudes et de méthodologie de travail pour vous rendre opérationnel en 03 mois de formation continue en cours du soir.",
@@ -369,7 +378,7 @@ export const trainingList = [
     id: 13,
     title: "Graphisme",
     description: "Cette formation s’adapte aux adultes en quête d’emploi ou de nouvelles compétences, en reconversion professionnelle et aux cadres qui souhaitent approfondir leurs connaissances dans le domaine du Design Graphique et décrocher un certificat.",
-    illustration: WebDevelopmentIllustration,
+    illustration: GraphicDesignIllustration,
     departement: null,
     label: null,
     presentation: "Cette formation s’adapte aux adultes en quête d’emploi ou de nouvelles compétences, en reconversion professionnelle et aux cadres qui souhaitent approfondir leurs connaissances dans le domaine du Design Graphique et décrocher un certificat. La formation en Graphisme initie les participants aux bases de la conception visuelle et aux outils nécessaires pour créer des supports graphiques impactant. Elle aborde les principes fondamentaux du design, la théorie des couleurs, la typographie, et la composition visuelle. Les participants apprendront à utiliser les logiciels de création graphique pour concevoir des logos, affiches, bannières et autres supports de communication. Elle permet d’acquérir les armes nécessaires en termes de compétences, d’aptitudes et de méthodologie de travail pour vous rendre opérationnel en 03 mois de formation continue en cours du soir.",
