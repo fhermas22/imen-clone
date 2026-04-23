@@ -10,6 +10,8 @@ function ErrorNotFound({
     redirectTo = "/",
     redirectText = "Retour à l'accueil",
     iconSrc = LinkBrokenPrimary,
+    iconSize = "w-50 h-50",
+    iconMarginBottom = "mb-8 xs:mb-12 md:mb-16",
     countdownText = "Redirection dans",
     countdown: initialCountdown = 10,
     autoRedirect = true
@@ -33,7 +35,7 @@ function ErrorNotFound({
                 <img
                     src={iconSrc}
                     alt={`Icône d'erreur ${title.toLowerCase()}`}
-                    className="w-50 h-50 mb-8 xs:mb-12 md:mb-16 animate-float drop-shadow-2xl"
+                    className={`${iconSize} ${iconMarginBottom} animate-float drop-shadow-2xl`}
                 />
             )}
 
