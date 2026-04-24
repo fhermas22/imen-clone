@@ -13,10 +13,14 @@ import { pillarList } from "../../datas/pillarList";
 import { trainingList } from "../../datas/trainingList";
 import { valuePointList } from "../../datas/valuePointList";
 
+// Prepare the data for the featured trainings on the homepage
 const longTermNumeric = trainingList.filter(training => training.departement === "Département Numérique").slice(0, 2);
 const longTermDesign = trainingList.filter(training => training.departement === "Département Design").slice(0, 1);
 const featuredLongTermTrainings = [...longTermNumeric, ...longTermDesign];
 const featuredContinuingTrainings = trainingList.filter(training => training.departement === null).slice(0, 3);
+
+// Get the total count of trainings for the statistics section
+const trainingsCount = trainingList.length;
 
 function Home() {
   return (
@@ -79,7 +83,7 @@ function Home() {
         lg:h-75 lg:flex lg:flex-row lg:gap-18 lg:p-0
       ">
         <StatsCounter number="72" title="Étudiants satisfaits" />
-        <StatsCounter number="16" title="Formations Réalisées" />
+        <StatsCounter number={trainingsCount} title="Formations Réalisées" />
         <StatsCounter number="39" title="Etudiants certifiés" />
         <StatsCounter number="+100" title="Partenaires" />
       </section>
