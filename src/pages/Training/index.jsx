@@ -26,7 +26,7 @@ function Training() {
             <ErrorNotFound 
                 title="404"
                 subtitle="Formation non trouvée"
-                description="La formation demandée n'existe pas ou l'ID est incorrect."
+                description="La formation demandée n'existe pas."
                 redirectTo="/"
                 redirectText="Retour à l'accueil"
                 iconSrc={PageNotFoundPrimary}
