@@ -1,68 +1,39 @@
-import { useParams, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+
 {/*== Component Imports  == */}
 import Button from "../../components/common/Button";
 import BoxDetail from "../../components/ui/BoxDetail";
 import TrainingDetail from "../../components/ui/TrainingDetail";
+import ErrorNotFound from "../../components/common/ErrorNotFound/index.jsx";
 {/*== Illustration & Docs Imports  == */}
-import HeroIllustration from "../../assets/images/illustrations/long.term.training/hero/long-term-training-hero.svg";
+import HeroIllustration from "../../assets/images/illustrations/trainings/long.term.training/hero/long-term-training-hero.svg";
 import ImenPaymentTerms from "../../assets/documents/imen-payment-terms-2024.png";
 {/*== Icons Imports  == */}
-import LinkBrokenPrimary from "../../assets/images/icons/link-broken-primary.svg";
+import PageNotFoundPrimary from "../../assets/images/icons/page-not-found-primary.svg";
 {/*== Data Imports  == */}
 import { trainingList } from "../../datas/trainingList";
 
 function Training() {
+    // Get the training ID from the URL parameters
     const { id } = useParams();
-    const navigate = useNavigate();
-    const [countdown, setCountdown] = useState(5);
+    
+    // Find the training in the training list based on the ID
     const training = trainingList.find((f) => f.id === parseInt(id));
 
-    useEffect(() => {
-        if (countdown > 0) {
-            const timer = setTimeout(() => setCountdown(countdown - 1), 1000);
-            return () => clearTimeout(timer);
-        } else if (!training) {
-            navigate('/training');
-        }
-    }, [countdown, navigate, training]);
-
+    // If no training is found with the given ID, display the error component
     if (!training) {
         return (
-            <main className="w-full min-h-screen flex flex-col items-center justify-center p-8 xs:p-12 md:p-16 lg:p-24 bg-gradient-to-br from-white to-gray-50">
-                <img
-                    src={LinkBrokenPrimary}
-                    alt="Icône d'erreur 404 - Formation non trouvée"
-                    className="w-50 h-50 mb-8 xs:mb-12 md:mb-16 animate-float drop-shadow-2xl"
-                />
-                <div className=' flex flex-col items-center'>
-                    <h1 className="font-title text-primary text-4xl font-bold xs:text-5xl md:text-6xl lg:text-7xl mb-4 xs:mb-6 md:mb-8 text-center leading-tight">
-                        404
-                    </h1>
-                    <p className="font-title text-gray-700 text-xl font-semibold xs:text-2xl md:text-3xl mb-4 xs:mb-6 md:mb-8 text-center max-w-md xs:max-w-lg md:max-w-2xl">
-                        Formation non trouvée
-                    </p>
-                    <p className="font-body text-gray-600 mb-6 text-base xs:text-lg md:text-xl xs:mb-10 md:mb-12 text-center max-w-md xs:max-w-lg md:max-w-2xl leading-relaxed">
-                        La formation demandée n'existe pas ou l'ID est incorrect. 
-                        <br className="block" />
-                        Redirection vers les formations dans <span className="font-bold text-primary">{countdown}s</span>.
-                    </p>
-                </div>
-                
-                <div className='flex flex-col items-center'>
-                    <Button 
-                        isPrimary 
-                        to="/training" 
-                        className="text-lg xs:text-xl md:text-2xl px-8! py-4! !md:py-5 mb-6 xs:mb-8"
-                        onClick={() => navigate('/training')}
-                    >
-                        Voir les formations
-                    </Button>
-                    <p className="font-body text-gray-500 text-sm xs:text-base text-center">
-                        Ou cliquez pour naviguer immédiatement.
-                    </p>
-                </div>
-            </main>
+            <ErrorNotFound 
+                title="404"
+                subtitle="Formation non trouvée"
+                description="La formation demandée n'existe pas."
+                redirectTo="/"
+                redirectText="Retour à l'accueil"
+                iconSrc={PageNotFoundPrimary}
+                iconSize="w-80 h-80"
+                iconMarginBottom="mb-1 xs:mb-2 md:mb-3"
+                countdown={5}
+            />
         );
     }
 

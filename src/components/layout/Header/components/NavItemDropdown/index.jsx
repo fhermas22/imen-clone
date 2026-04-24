@@ -1,8 +1,9 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import ChevronDownPrimary from '../../../../../assets/images/icons/chevron-down-primary.svg';
 import ChevronDownSecondary from '../../../../../assets/images/icons/chevron-down-secondary.svg';
 
-const NavItemDropdown = ({ title, items}) => {
+const NavItemDropdown = ({ title, items, onLinkClick }) => {
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
 
   // Function for hover on desktop (>= 1024px)
@@ -54,12 +55,22 @@ const NavItemDropdown = ({ title, items}) => {
       `}> 
         {items.map((item, index) => (
           <li key={index}>
-            <a 
-              href={item.link} 
-              className="block py-1.5 lg:px-4 lg:py-2 text-sm text-primary hover:text-secondary lg:hover:bg-gray-100 transition"
-            >
-              {item.label}
-            </a>
+            {item.link === '#' ? (
+              <span 
+                className="block py-1.5 text-sm text-primary cursor-default hover:text-primary! lg:px-4 lg:py-2 lg:hover:bg-transparent!"
+                onClick={onLinkClick}
+              >
+                {item.label}
+              </span>
+            ) : (
+              <Link 
+                to={item.link} 
+                className="block py-1.5 text-sm text-primary hover:text-secondary transition lg:px-4 lg:py-2 lg:hover:bg-gray-100"
+                onClick={onLinkClick}
+              >
+                {item.label}
+              </Link>
+            )}
           </li>
         ))}
       </ul>
