@@ -10,12 +10,17 @@ function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
 
-    // 1. Toggle Mobile Menu
+    // Toggle Mobile Menu
     const toggleMenu = () => {
         setIsOpen(!isOpen);
-    }
+    };
 
-    // 2. Scroll Detection for Navbar Shadow
+    // Function to close the menu (used when clicking on a link)
+    const closeMenu = () => {
+        setIsOpen(false);
+    };
+
+    // Scroll Detection for Navbar Shadow
     useEffect(() => {
         const handleScroll = () => {
         setIsScrolled(window.scrollY > 20);
@@ -66,7 +71,13 @@ function Navbar() {
             `}>
                 <ul className="flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-[2vw]">
                     <li>
-                        <Link className="text-primary font-title font-medium hover:text-secondary transition duration-300" to="/">Accueil</Link>
+                        <Link 
+                            className="text-primary font-title font-medium hover:text-secondary transition duration-300" 
+                            to="/" 
+                            onClick={closeMenu}
+                        >
+                            Accueil
+                        </Link>
                     </li>
 
                     {/* Dropdown : Discover IMeN */}
@@ -77,7 +88,8 @@ function Navbar() {
                             { label: "Notre vision", link: "#" },
                             { label: "Notre réseau", link: "#" },
                             { label: "Le parcours de certification", link: "#" },
-                        ]} 
+                        ]}
+                        onLinkClick={closeMenu}
                     />
 
                     {/* Dropdown : Our Training Courses */}
@@ -88,11 +100,18 @@ function Navbar() {
                             { label: "Département Design", link: "/department/design" },
                             { label: "Formations Continues", link: "/department/continuing-education" },
                             { label: "Workshops & Ateliers", link: "#" },
-                        ]} 
+                        ]}
+                        onLinkClick={closeMenu}
                     />
 
                     <li>
-                        <a className="text-primary font-title font-medium hover:text-secondary transition duration-300" href="#">Nos Programmes</a>
+                        <a 
+                            className="text-primary font-title font-medium hover:text-secondary transition duration-300" 
+                            href="#" 
+                            onClick={closeMenu}
+                        >
+                            Nos Programmes
+                        </a>
                     </li>
 
                     {/* Dropdown : News */}
@@ -102,14 +121,27 @@ function Navbar() {
                             { label: "Blog", link: "#" },
                             { label: "Évènements", link: "#" },
                             { label: "Recrutements", link: "#" },
-                        ]} 
+                        ]}
+                        onLinkClick={closeMenu}
                     />
 
                     <li>
-                        <a className="text-primary font-title font-medium hover:text-secondary transition duration-300" href="#">Contact</a>
+                        <a 
+                            className="text-primary font-title font-medium hover:text-secondary transition duration-300" 
+                            href="#" 
+                            onClick={closeMenu}
+                        >
+                            Contact
+                        </a>
                     </li>
                     <li>
-                        <a className="text-primary font-title font-medium hover:text-secondary transition duration-300" href="#">Portfolio Étudiants</a>
+                        <a 
+                            className="text-primary font-title font-medium hover:text-secondary transition duration-300" 
+                            href="#" 
+                            onClick={closeMenu}
+                        >
+                            Portfolio Étudiants
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -117,7 +149,7 @@ function Navbar() {
                 <img src={isOpen ? CloseWhite : MenuWhite} onClick={toggleMenu} className="cursor-pointer" alt="Icône du menu" width="20" height="20" />
             </div>
         </nav>
-    )
+    );
 }
 
-export default Navbar
+export default Navbar;
