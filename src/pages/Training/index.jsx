@@ -1,6 +1,7 @@
+{/*== React & Package Imports  == */}
 import { useParams } from "react-router-dom";
-
 {/*== Component Imports  == */}
+import Hero from "../../components/common/Hero/index.jsx";
 import Button from "../../components/common/Button";
 import BoxDetail from "../../components/ui/BoxDetail";
 import TrainingDetail from "../../components/ui/TrainingDetail";
@@ -40,22 +41,11 @@ function Training() {
     return (
         <main>
             {/*======== Section 1 : Title Hero  ======== */}
-            <section id="section1" className="relative z-0 w-full h-56 overflow-hidden">
-                {/*==== Sub-Section : Background Illustration Image ====*/}
-                <img
-                    src={HeroIllustration}
-                    alt="Image minimaliste et stylisée illustrant la formation en Programmation Informatique"
-                    className="absolute inset-0 w-full h-full object-cover object-[center_30%]"
-                    loading="eager"
-                />
-
-                {/*==== Sub-Section : Training Title ====*/}
-                <div className="absolute inset-0 bg-black/80 flex items-center justify-center">
-                    <h1 className="font-title text-white text-3xl font-semibold uppercase text-center px-2 xs:text-[32px] md:text-[40px] lg:text-[50px]">
-                        {training.title}
-                    </h1>
-                </div>
-            </section>
+            <Hero
+                sectionId="section1"
+                title={training.title}
+                imgSrc={HeroIllustration}
+            />
 
             <div className="w-full flex flex-col gap-2 py-8 px-6 lg:flex-row lg:items-start lg:justify-center lg:gap-10 lg:py-14 lg:px-[10vw] xl:gap-2 xl:px-[20vw]">
                 {/*======== Section 2 : Training Main Details  ======== */}
