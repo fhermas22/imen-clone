@@ -34,7 +34,7 @@ function Navbar() {
         <nav className={`
         fixed z-50 top-0 left-0 flex justify-center items-center w-screen h-20 mx-auto transition-all duration-500
         ${isScrolled 
-            ? "bg-white/94 backdrop-blur-md shadow-md border-b border-white/20" 
+            ? "bg-white/94 backdrop-blur-md shadow-md" 
             : "bg-white shadow-xs"}
         `}>
             {/* Logo */}
@@ -70,6 +70,7 @@ function Navbar() {
                 max-h-[90vh] overflow-y-auto lg:overflow-visible
             `}>
                 <ul className="flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-[2vw]">
+                    {/* Link : Home */}
                     <li>
                         <Link 
                             className="text-primary font-title font-medium hover:text-secondary transition duration-300" 
@@ -104,14 +105,15 @@ function Navbar() {
                         onLinkClick={closeMenu}
                     />
 
+                    {/* Link : Our Programs */}
                     <li>
-                        <a 
+                        <Link 
                             className="text-primary font-title font-medium hover:text-secondary transition duration-300" 
-                            href="#" 
+                            to="/programs" 
                             onClick={closeMenu}
                         >
                             Nos Programmes
-                        </a>
+                        </Link>
                     </li>
 
                     {/* Dropdown : News */}
@@ -125,23 +127,26 @@ function Navbar() {
                         onLinkClick={closeMenu}
                     />
 
+                    {/* Link : Contact */}
                     <li>
-                        <a 
+                        <Link 
                             className="text-primary font-title font-medium hover:text-secondary transition duration-300" 
-                            href="#" 
+                            to="#" 
                             onClick={closeMenu}
                         >
                             Contact
-                        </a>
+                        </Link>
                     </li>
+
+                    {/* Link : Student Portfolio */}
                     <li>
-                        <a 
+                        <Link 
                             className="text-primary font-title font-medium hover:text-secondary transition duration-300" 
-                            href="#" 
+                            to="#" 
                             onClick={closeMenu}
                         >
                             Portfolio Étudiants
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </div>
