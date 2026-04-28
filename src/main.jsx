@@ -20,10 +20,25 @@ createRoot(document.getElementById('root')).render(
     <ScrollToTop />
       <Header />
       <Routes>
+        {/* Completed Routes */}
         <Route path="/" element={<Home />} />
         <Route path="/training/:id" element={<Training />} />
         <Route path="/department/:dept" element={<Department />} />
         <Route path="/programs" element={<Programs />} />
+
+        {/* Routes under construction */}
+        <Route path="/school" element={<Error />} />
+        <Route path="/our-vision" element={<Error />} />
+        <Route path="/our-network" element={<Error />} />
+        <Route path="/certification-process" element={<Error />} />
+        <Route path="/workshops" element={<Error />} />
+        <Route path="/blog" element={<Error />} />
+        <Route path="/events" element={<Error />} />
+        <Route path="/jobs" element={<Error />} />
+        <Route path="/about" element={<Error />} />
+        <Route path="/student-portfolio" element={<Error />} />
+
+        {/* Catch-all route for undefined paths */}
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
