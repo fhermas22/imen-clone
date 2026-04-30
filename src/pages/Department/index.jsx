@@ -100,14 +100,18 @@ function Department() {
 
                     {/*==== Sub-Section : Action Buttons ====*/}
                     <div className="flex flex-col items-center justify-center gap-6 mt-14 md:flex-row">
-                        <Button isPrimary={true} className="px-10 xs:px-12 md:px-14">
+                        <Button 
+                          isPrimary={true} 
+                          to={"/student-registration"}
+                          className="px-10 xs:px-12 md:px-14"
+                        >
                             Devenir Étudiant
                         </Button>
                         
                         <Button 
-                            isPrimary={false} 
-                            className="capitalize px-10 xs:px-12 md:px-14" 
-                            to={deptLink}
+                          isPrimary={false} 
+                          className="capitalize px-10 xs:px-12 md:px-14" 
+                          to={deptLink}
                         >
                             {dept === "design" ? "Voir les Formations Continues" : `Voir Pôle ${deptLabel.replace("Département ", "")}`}
                         </Button>

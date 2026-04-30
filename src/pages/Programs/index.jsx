@@ -34,12 +34,17 @@ function Programs() {
 
       {/*======== Section 3 : Action Buttons  ======== */}
       <section id="section3" className="flex flex-col items-center justify-center gap-6 mt-4 mb-14 md:flex-row">
-        <Button isPrimary={true} className="px-10 xs:px-12 md:px-14">
+        <Button 
+          isPrimary={true} 
+          to={"/student-registration"}
+          className="px-10 xs:px-12 md:px-14"
+        >
           Devenir Étudiant
         </Button>
 
         <Button
           isPrimary={false}
+          to={"/school"}
           className="capitalize px-10 xs:px-12 md:px-14"
         >
           Découvrir notre École
