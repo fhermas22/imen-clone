@@ -4,6 +4,8 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 {/*== Script Imports  == */}
 import ScrollToTop from './utils/scripts/ScrollToTop.jsx';
+{/*== Component Imports  == */}
+import { AfriChatBootstrap } from './components/ui/AfriChatBootstrap/index.jsx';
 {/*== Layout Component Imports  == */}
 import Header from './components/layout/Header/index.jsx'
 import Footer from './components/layout/Footer/index.jsx';
@@ -19,6 +21,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
     <ScrollToTop />
+    <AfriChatBootstrap />
       <Header />
       <Routes>
         {/* Completed Routes */}
