@@ -13,6 +13,7 @@ import Training from './pages/Training/index.jsx';
 import Department from './pages/Department/index.jsx';
 import Programs from './pages/Programs/index.jsx';
 import Error from './pages/Error/index.jsx';
+import UnderConstruction from './pages/UnderConstruction/index.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -27,16 +28,17 @@ createRoot(document.getElementById('root')).render(
         <Route path="/programs" element={<Programs />} />
 
         {/* Routes under construction */}
-        <Route path="/school" element={<Error />} />
-        <Route path="/our-vision" element={<Error />} />
-        <Route path="/our-network" element={<Error />} />
-        <Route path="/certification-process" element={<Error />} />
-        <Route path="/workshops" element={<Error />} />
-        <Route path="/blog" element={<Error />} />
-        <Route path="/events" element={<Error />} />
-        <Route path="/jobs" element={<Error />} />
-        <Route path="/about" element={<Error />} />
-        <Route path="/student-portfolio" element={<Error />} />
+        <Route path="/school" element={<UnderConstruction />} />
+        <Route path="/our-vision" element={<UnderConstruction />} />
+        <Route path="/our-network" element={<UnderConstruction />} />
+        <Route path="/certification-process" element={<UnderConstruction />} />
+        <Route path="/workshops" element={<UnderConstruction />} />
+        <Route path="/blog" element={<UnderConstruction />} />
+        <Route path="/events" element={<UnderConstruction />} />
+        <Route path="/jobs" element={<UnderConstruction />} />
+        <Route path="/about" element={<UnderConstruction />} />
+        <Route path="/student-portfolio" element={<UnderConstruction />} />
+        <Route path="/student-registration" element={<UnderConstruction />} />
 
         {/* Catch-all route for undefined paths */}
         <Route path="*" element={<Error />} />
