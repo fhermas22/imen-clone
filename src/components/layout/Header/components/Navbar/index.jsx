@@ -85,10 +85,10 @@ function Navbar() {
                     <NavItemDropdown 
                         title="Découvrir l'IMeN" 
                         items={[
-                            { label: "L'école", link: "#" },
-                            { label: "Notre vision", link: "#" },
-                            { label: "Notre réseau", link: "#" },
-                            { label: "Le parcours de certification", link: "#" },
+                            { label: "L'école", link: "/school" },
+                            { label: "Notre vision", link: "/our-vision" },
+                            { label: "Notre réseau", link: "/our-network" },
+                            { label: "Le parcours de certification", link: "/certification-process" },
                         ]}
                         onLinkClick={closeMenu}
                     />
@@ -100,7 +100,7 @@ function Navbar() {
                             { label: "Département Numérique", link: "/department/numerique" },
                             { label: "Département Design", link: "/department/design" },
                             { label: "Formations Continues", link: "/department/continuing-education" },
-                            { label: "Workshops & Ateliers", link: "#" },
+                            { label: "Workshops & Ateliers", link: "/workshops" },
                         ]}
                         onLinkClick={closeMenu}
                     />
@@ -120,9 +120,9 @@ function Navbar() {
                     <NavItemDropdown 
                         title="Actualités" 
                         items={[
-                            { label: "Blog", link: "#" },
-                            { label: "Évènements", link: "#" },
-                            { label: "Recrutements", link: "#" },
+                            { label: "Blog", link: "/blog" },
+                            { label: "Évènements", link: "/events" },
+                            { label: "Recrutements", link: "/jobs" },
                         ]}
                         onLinkClick={closeMenu}
                     />
@@ -131,7 +131,7 @@ function Navbar() {
                     <li>
                         <Link 
                             className="text-primary font-title font-medium hover:text-secondary transition duration-300" 
-                            to="#" 
+                            to="/about" 
                             onClick={closeMenu}
                         >
                             Contact
@@ -142,7 +142,7 @@ function Navbar() {
                     <li>
                         <Link 
                             className="text-primary font-title font-medium hover:text-secondary transition duration-300" 
-                            to="#" 
+                            to="/student-portfolio" 
                             onClick={closeMenu}
                         >
                             Portfolio Étudiants
