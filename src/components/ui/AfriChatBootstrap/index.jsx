@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { createMyAfriChat } from "my-africhat";
-import afriChatConfig from "../../../../africhat.config.js";
+import { afriChatConfig } from "../../../../africhat.config.js";
 
 export function AfriChatBootstrap() {
   useEffect(() => {

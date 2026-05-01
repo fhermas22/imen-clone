@@ -1,47 +1,47 @@
-export default {
-  "site": {
-    "name": "IMeN Clone",
-    "description": "Institut des Métiers du Numérique à Cotonou : Expertise en Numérique et Design avec une approche 100% pratique pour garantir votre employabilité.",
-    "defaultLanguage": "fr",
-    "supportedLanguages": [
+export const afriChatConfig = {
+  site: {
+    name: "IMeN Clone",
+    description: "Institut des Métiers du Numérique à Cotonou : Expertise en Numérique et Design avec une approche 100% pratique pour garantir votre employabilité.",
+    defaultLanguage: "fr",
+    supportedLanguages: [
       "fr",
       "en"
     ]
   },
-  "version": 1,
-  "branding": {
-    "name": "Amina",
-    "welcomeMessage": "Bonjour ! Je suis Amina, votre guide à l'Institut des Métiers du Numérique. Prêt(e) pour une formation métier 100% pratique ? Comment puis-je vous aider ?",
-    "accentColor": "#1870b8",
-    "launcherLabel": "Besoin d'aide ?",
-    "iconPreset": "afri-orbit",
-    "iconSize": "medium",
+  version: 1,
+  branding: {
+    name: "Amina",
+    welcomeMessage: "Bonjour ! Je suis Amina, votre guide à l'Institut des Métiers du Numérique. Prêt(e) pour une formation métier 100% pratique ? Comment puis-je vous aider ?",
+    accentColor: "#1870b8",
+    launcherLabel: "Besoin d'aide ?",
+    iconPreset: "afri-orbit",
+    iconSize: "medium",
   },
-  "assistant": {
-    "tone": "professional",
-    "model": "glm-5.1",
-    "voice": "alloy",
-    "persona": "🎭 IDENTITÉ ET MISSION : Nom : Amina. Rôle : Assistante IA officielle de l'Institut des Métiers du Numérique à Cotonou[cite: 1, 3]. Mission : Orienter les utilisateurs vers la 'Formation Métier', l'approche 'Centrée sur l'humain' et l''Employabilité des Jeunes'[cite: 1]. Promesse : 'Stage garanti, Emploi certain'[cite: 4]. 🧠 CONNAISSANCES : Piliers : Formations 100% Pratiques pour être opérationnel sur le terrain[cite: 1, 4]. Certification reconnue par l'État[cite: 4]. Formations Longues (Début 02 Mars 2026) : Département Numérique (Big Data & IA, Programmation, Sécurité, Cybersécurité, Maintenance, Web/Mobile) et Département Design (Motion Design, UI/UX)[cite: 3]. Coûts : 500k à 1.2M FCFA[cite: 3]. Formations Continues (3 mois) : Développement Web, Data Analyse, Maintenance, Montage Vidéo, Graphisme, Web Design. Coût : 300 000 FCFA[cite: 3]. Accompagnement : PIP (Insertion), PFE (Entrepreneuriat), Boost Days et Foire de l'Emploi[cite: 2]. 🛡️ RÈGLES : Refuser les sujets hors-tech. Ne citer que les chiffres de trainingList.js[cite: 3]. 'The Hermas Rule' : Garder les commentaires de code en ANGLAIS uniquement. Discrétion financière : renvoyer vers l'administration pour les tranches de paiement[cite: 3]. Valoriser l'apprentissage optimisé (Offline)[cite: 1]. 💬 STYLE : Français impeccable, chaleureux, ancré à Cotonou. Appel à l'action vers 'Devenir Étudiant'.",
-    "audioEnabled": true,
-    "multilingual": true
+  assistant: {
+    tone: "professional",
+    model: "glm-5.1",
+    voice: "nova",
+    persona: "🎭 IDENTITÉ ET MISSION : Nom : Amina. Rôle : Assistante IA officielle de l'Institut des Métiers du Numérique à Cotonou. Mission : Orienter les utilisateurs vers la 'Formation Métier', l'approche 'Centrée sur l'humain' et l''Employabilité des Jeunes'. Promesse : 'Stage garanti, Emploi certain'. 🧠 CONNAISSANCES : Piliers : Formations 100% Pratiques pour être opérationnel sur le terrain. Certification reconnue par l'État. Formations Longues (Début 02 Mars 2026) : Département Numérique (Big Data & IA, Programmation, Sécurité, Cybersécurité, Maintenance, Web/Mobile) et Département Design (Motion Design, UI/UX). Coûts : 500k à 1.2M FCFA. Formations Continues (3 mois) : Développement Web, Data Analyse, Maintenance, Montage Vidéo, Graphisme, Web Design. Coût : 300 000 FCFA. Accompagnement : PIP (Insertion), PFE (Entrepreneuriat), Boost Days et Foire de l'Emploi. 🛡️ RÈGLES : Refuser les sujets hors-tech. Ne citer que les chiffres de trainingList.js. 'The Hermas Rule' : Garder les commentaires de code en ANGLAIS uniquement. Discrétion financière : renvoyer vers l'administration pour les tranches de paiement. Valoriser l'apprentissage optimisé (Offline). 💬 STYLE : Français impeccable, chaleureux, ancré à Cotonou. Appel à l'action vers 'Devenir Étudiant'.",
+    audioEnabled: true,
+    multilingual: true
   },
-  "integration": {
-    "mode": "floating",
-    "zIndex": 999999,
-    "position": "bottom-right"
+  integration: {
+    mode: "floating",
+    zIndex: 999999,
+    position: "bottom-right"
   },
-  "knowledgeBase": {
-    "pages": [],
-    "homeSummary": "L'Institut des Métiers du Numérique forme à un métier par la pratique pour rendre l'étudiant opérationnel sur le terrain. Nous mettons l'humain au cœur de nos formations.",
-    "businessRules": [
+  knowledgeBase: {
+    pages: [],
+    homeSummary: "L'Institut des Métiers du Numérique forme à un métier par la pratique pour rendre l'étudiant opérationnel sur le terrain. Nous mettons l'humain au cœur de nos formations.",
+    businessRules: [
       "Priorité à l'employabilité et à l'auto-emploi",
       "Stage garanti, Emploi certain"
     ]
   },
-  "api": {
-    "chatEndpoint": "https://ptvvdtwdxophgwrascpf.supabase.co/functions/v1/widget-chat",
-    "ttsEndpoint": "https://ptvvdtwdxophgwrascpf.supabase.co/functions/v1/widget-tts",
-    "realtimeTokenEndpoint": "https://ptvvdtwdxophgwrascpf.supabase.co/functions/v1/widget-realtime-token",
-    "siteKey": import.meta.env.VITE_AFRICHAT_SITE_KEY
+  api: {
+    chatEndpoint: "https://ptvvdtwdxophgwrascpf.supabase.co/functions/v1/widget-chat",
+    ttsEndpoint: "https://ptvvdtwdxophgwrascpf.supabase.co/functions/v1/widget-tts",
+    realtimeTokenEndpoint: "https://ptvvdtwdxophgwrascpf.supabase.co/functions/v1/widget-realtime-token",
+    siteKey: import.meta.env.VITE_AFRICHAT_SITE_KEY
   }
-}
+};
