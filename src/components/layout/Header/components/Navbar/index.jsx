@@ -34,7 +34,7 @@ function Navbar() {
         <nav className={`
         fixed z-50 top-0 left-0 flex justify-center items-center w-screen h-20 mx-auto transition-all duration-500
         ${isScrolled 
-            ? "bg-white/94 backdrop-blur-md shadow-md border-b border-white/20" 
+            ? "bg-white/94 backdrop-blur-md shadow-md" 
             : "bg-white shadow-xs"}
         `}>
             {/* Logo */}
@@ -70,6 +70,7 @@ function Navbar() {
                 max-h-[90vh] overflow-y-auto lg:overflow-visible
             `}>
                 <ul className="flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-[2vw]">
+                    {/* Link : Home */}
                     <li>
                         <Link 
                             className="text-primary font-title font-medium hover:text-secondary transition duration-300" 
@@ -84,10 +85,10 @@ function Navbar() {
                     <NavItemDropdown 
                         title="Découvrir l'IMeN" 
                         items={[
-                            { label: "L'école", link: "#" },
-                            { label: "Notre vision", link: "#" },
-                            { label: "Notre réseau", link: "#" },
-                            { label: "Le parcours de certification", link: "#" },
+                            { label: "L'école", link: "/school" },
+                            { label: "Notre vision", link: "/our-vision" },
+                            { label: "Notre réseau", link: "/our-network" },
+                            { label: "Le parcours de certification", link: "/certification-process" },
                         ]}
                         onLinkClick={closeMenu}
                     />
@@ -99,49 +100,53 @@ function Navbar() {
                             { label: "Département Numérique", link: "/department/numerique" },
                             { label: "Département Design", link: "/department/design" },
                             { label: "Formations Continues", link: "/department/continuing-education" },
-                            { label: "Workshops & Ateliers", link: "#" },
+                            { label: "Workshops & Ateliers", link: "/workshops" },
                         ]}
                         onLinkClick={closeMenu}
                     />
 
+                    {/* Link : Our Programs */}
                     <li>
-                        <a 
+                        <Link 
                             className="text-primary font-title font-medium hover:text-secondary transition duration-300" 
-                            href="#" 
+                            to="/programs" 
                             onClick={closeMenu}
                         >
                             Nos Programmes
-                        </a>
+                        </Link>
                     </li>
 
                     {/* Dropdown : News */}
                     <NavItemDropdown 
                         title="Actualités" 
                         items={[
-                            { label: "Blog", link: "#" },
-                            { label: "Évènements", link: "#" },
-                            { label: "Recrutements", link: "#" },
+                            { label: "Blog", link: "/blog" },
+                            { label: "Évènements", link: "/events" },
+                            { label: "Recrutements", link: "/jobs" },
                         ]}
                         onLinkClick={closeMenu}
                     />
 
+                    {/* Link : Contact */}
                     <li>
-                        <a 
+                        <Link 
                             className="text-primary font-title font-medium hover:text-secondary transition duration-300" 
-                            href="#" 
+                            to="/about" 
                             onClick={closeMenu}
                         >
                             Contact
-                        </a>
+                        </Link>
                     </li>
+
+                    {/* Link : Student Portfolio */}
                     <li>
-                        <a 
+                        <Link 
                             className="text-primary font-title font-medium hover:text-secondary transition duration-300" 
-                            href="#" 
+                            to="/student-portfolio" 
                             onClick={closeMenu}
                         >
                             Portfolio Étudiants
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </div>

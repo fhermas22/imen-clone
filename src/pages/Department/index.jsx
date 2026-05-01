@@ -1,13 +1,15 @@
-/*== Component Imports  == */
+{/*== React & Package Imports  == */}
 import { useParams } from "react-router-dom";
+{/*== Component Imports  == */}
+import Hero from "../../components/common/Hero/index.jsx";
 import TrainingCard from "../../components/ui/TrainingCard";
 import Button from "../../components/common/Button";
 import ErrorNotFound from "../../components/common/ErrorNotFound/index.jsx";
-/*== Illustration Imports  == */
+{/*== Illustration Imports  == */}
 import DigitalHero from "../../assets/images/illustrations/trainings/long.term.training/hero/digital-department-hero.svg";
 import DesignHero from "../../assets/images/illustrations/trainings/long.term.training/hero/design-department-hero.svg";
 import ContinuingHero from "../../assets/images/illustrations/trainings/continuing.education/hero/continuing-education-hero.svg";
-/*== Data Imports  == */
+{/*== Data Imports  == */}
 import { trainingList } from "../../datas/trainingList";
 
 const deptConfig = {
@@ -64,19 +66,11 @@ function Department() {
     return (
         <main>
             {/*======== Section 1 : Title Hero  ======== */}
-            <section id="section1" className="relative z-0 w-full h-56 overflow-hidden">
-                <img
-                    src={config.hero}
-                    alt={`Illustration ${config.name}`}
-                    className="absolute inset-0 w-full h-full object-cover object-[center_30%]"
-                    loading="eager"
-                />
-                <div className="absolute inset-0 bg-black/80 flex items-center justify-center">
-                    <h1 className="font-title text-white text-3xl font-semibold uppercase text-center px-2 xs:text-[32px] md:text-[40px] lg:text-[50px]">
-                        {config.name}
-                    </h1>
-                </div>
-            </section>
+            <Hero 
+                sectionId="section1"
+                title={config.name}
+                imgSrc={config.hero}
+            />
 
             {/*======== Section 2 : Department Trainings ======== */}
             <section id="section2" className="w-full pt-10 pb-16 flex flex-col items-center lg:pt-14 lg:pb-20">
@@ -106,14 +100,18 @@ function Department() {
 
                     {/*==== Sub-Section : Action Buttons ====*/}
                     <div className="flex flex-col items-center justify-center gap-6 mt-14 md:flex-row">
-                        <Button isPrimary={true} className="px-10 xs:px-12 md:px-14">
+                        <Button 
+                          isPrimary={true} 
+                          to={"/student-registration"}
+                          className="px-10 xs:px-12 md:px-14"
+                        >
                             Devenir Étudiant
                         </Button>
                         
                         <Button 
-                            isPrimary={false} 
-                            className="capitalize px-10 xs:px-12 md:px-14" 
-                            to={deptLink}
+                          isPrimary={false} 
+                          className="capitalize px-10 xs:px-12 md:px-14" 
+                          to={deptLink}
                         >
                             {dept === "design" ? "Voir les Formations Continues" : `Voir Pôle ${deptLabel.replace("Département ", "")}`}
                         </Button>

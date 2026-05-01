@@ -1,12 +1,15 @@
+{/*== React & Package Imports  == */ }
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import LinkBrokenPrimary from "../../../assets/images/icons/link-broken-primary.svg";
+{/*== Component Imports  == */ }
 import Button from "../Button/index.jsx";
+{/*== Icons Imports  == */ }
+import LinkBrokenPrimary from "../../../assets/images/icons/link-broken-primary.svg";
 
 function ErrorNotFound({
     title = "404",
     subtitle = "Page non trouvée",
-    description,
+    description = "La page que vous recherchez n'existe pas ou a été déplacée.",
     redirectTo = "/",
     redirectText = "Retour à l'accueil",
     iconSrc = LinkBrokenPrimary,
@@ -19,6 +22,15 @@ function ErrorNotFound({
     const navigate = useNavigate();
     const [countdown, setCountdown] = useState(initialCountdown);
 
+    // Format description to support line breaks
+    const formattedDescription = description.split('\n').map((line, index) => (
+        <span key={index}>
+            {line}
+            {index < description.split('\n').length - 1 && <br />}
+        </span>
+    ));
+
+    // Countdown and auto-redirect logic
     useEffect(() => {
         if (autoRedirect && countdown > 0) {
             const timer = setTimeout(() => setCountdown(countdown - 1), 1000);
@@ -48,7 +60,7 @@ function ErrorNotFound({
                     {subtitle}
                 </p>
                 <p className="font-body text-gray-600 mb-6 text-base xs:text-lg md:text-xl xs:mb-10 md:mb-12 text-center max-w-md xs:max-w-lg md:max-w-2xl leading-relaxed">
-                    {description}
+                    {formattedDescription}
                     {autoRedirect && (
                         <>
                             <br className="block" />

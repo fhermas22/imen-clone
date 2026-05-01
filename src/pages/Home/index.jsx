@@ -44,8 +44,8 @@ function Home() {
 
             {/*==== Sub-Section : Buttons ====*/}
             <div className="flex flex-col items-center gap-4 mt-10 md:flex-row md:mt-16">
-              <Button isPrimary={true} className="md:mr-6">Découvrir l'IMeN</Button>
-              <Button isPrimary={false} className="">Devenir Étudiant</Button>
+              <Button isPrimary={true} to={"/school"} className="md:mr-6">Découvrir l'IMeN</Button>
+              <Button isPrimary={false} to={"/student-registration"} className="">Devenir Étudiant</Button>
             </div>
         </div>
       </section>
@@ -146,7 +146,7 @@ function Home() {
             }
 
             <span className="flex justify-center w-full lg:justify-start">
-              <Button isPrimary={true} className="self-start mt-4">Devenir Étudiant</Button>
+              <Button isPrimary={true} to={"/student-registration"} className="self-start mt-4">Devenir Étudiant</Button>
             </span>
           </div>
         </div>
