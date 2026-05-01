@@ -5,7 +5,7 @@
 [![React](https://img.shields.io/badge/React-19.2.0-blue?style=for-the-badge&logo=react)](https://react.dev)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.1.18-38bdf8?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com)
 [![Vite](https://img.shields.io/badge/Vite-7.3.1-646CFF?style=for-the-badge&logo=vite)](https://vite.dev)
-[![Version](https://img.shields.io/badge/Version-0.6.12-green?style=flat-square)](https://github.com/fhermas22/imen-clone)
+[![Version](https://img.shields.io/badge/Version-0.9.14-green?style=flat-square)](https://github.com/fhermas22/imen-clone)
 [![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel)](https://vercel.com)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
@@ -24,9 +24,13 @@
 - **Continuing Education** — 6 TrainingCards (Développement Web, Analyse de Données, Maintenance Informatique, Montage Vidéo, Graphisme, Web Design)
 - **Department Pages** — Dynamic `/department/:dept` routes (Numérique, Design, Continuing Education) with hero illustrations and filtered training grids
 - **Training Detail Page** — `/training/:id` route with TrainingDetail, BoxDetail components, and downloadable payment terms
+- **Programs Page** — `/programs` route displaying 4 programs (PIP, PFE, Foire de l'Emploi, IMeN Boost Days) with RichTextBlock components
+- **Under Construction Pages** — Reusable placeholder component for upcoming routes with countdown redirect
+- **AI Chat Assistant** — AfriChatBootstrap integration with My-AfriChat widget (Amina), featuring voice, multilingual support, and custom IMeN configuration
+- **RichTextBlock Component** — Reusable component for rendering multi-paragraph content with title and borders
 - **Reusable Error Component** — Configurable ErrorNotFound component with auto-redirect countdown for 404 scenarios
 - **Footer & Social Links** — Responsive Footer with SocialLink components (Facebook, Instagram, Twitter/X, LinkedIn)
-- **Component-Based & Data-Driven** — Reusable UI components driven by `src/datas/` (pillarList.js, trainingList.js, valuePointList.js)
+- **Component-Based & Data-Driven** — Reusable UI components driven by `src/datas/` (pillarList.js, trainingList.js, valuePointList.js, programList.js)
 - **ScrollToTop Utility** — Smooth scrolling on page navigation
 - **Client-Side Routing** — React Router DOM with BrowserRouter
 - **Dynamic Routing** — Department and Training pages render content dynamically via `useParams` based on route IDs, reducing duplication
@@ -41,6 +45,7 @@
 | Vite | 7.3.1 | Fast build tool and dev server |
 | Tailwind CSS | 4.1.18 (@tailwindcss/vite) | Utility-first CSS with Vite plugin |
 | React Router DOM | 7.13.1 | BrowserRouter for SPA routing |
+| My-AfriChat | 0.1.3 | AI Chat widget integration (Amina assistant) |
 | ESLint | 9.39.3 (flat config) | Modern linting configuration |
 
 ## 📋 Prerequisites
@@ -91,6 +96,7 @@ imen-clone/
 │   │   ├── images/
 │   │   │   ├── icons/                # SVG icons (primary/secondary/blue/white variants)
 │   │   │   ├── illustrations/
+│   │   │   │   ├── hero/             # Hero illustrations (programs)
 │   │   │   │   ├── other/            # our-students.webp
 │   │   │   │   ├── trainings/
 │   │   │   │   │   ├── continuing.education/     # 6 training images + hero
@@ -98,11 +104,12 @@ imen-clone/
 │   │   │   ├── logo/                 # imen_logo.png, imen_logo_dark.png
 │   │   │   ├── photos/               # imen-building.webp, it-programming-students.webp
 │   │   │   └── screenshots/          # Page screenshots for documentation
-│   │   └── screenshots/
 │   ├── components/
 │   │   ├── common/
 │   │   │   ├── Button/
-│   │   │   └── ErrorNotFound/        # Reusable 404 component with countdown redirect
+│   │   │   ├── ErrorNotFound/        # Reusable 404 component with countdown redirect
+│   │   │   ├── Hero/
+│   │   │   └── RichTextBlock/        # Multi-paragraph content renderer
 │   │   ├── layout/
 │   │   │   ├── Footer/
 │   │   │   │   └── components/
@@ -112,6 +119,7 @@ imen-clone/
 │   │   │           ├── Navbar/       # Mobile hamburger + scroll-aware nav
 │   │   │           └── NavItemDropdown/
 │   │   └── ui/
+│   │       ├── AfriChatBootstrap/    # My-AfriChat AI assistant integration
 │   │       ├── BoxDetail/            # Training metadata sidebar component
 │   │       ├── PillarCard/
 │   │       ├── SectionTitle/
@@ -121,13 +129,16 @@ imen-clone/
 │   │       └── ValuePoint/
 │   ├── datas/
 │   │   ├── pillarList.js             # 3 pillars data
+│   │   ├── programList.js            # 4 programs (PIP, PFE, Foire, Boost Days)
 │   │   ├── trainingList.js           # All trainings (8 long-term + 6 continuing)
 │   │   └── valuePointList.js         # 4 value points
 │   ├── pages/
 │   │   ├── Department/               # Dynamic department listing page
 │   │   ├── Error/                    # 404 error page
 │   │   ├── Home/                     # Landing page with 6 sections
-│   │   └── Training/                 # Dynamic training detail page
+│   │   ├── Programs/                 # Programs listing page
+│   │   ├── Training/                 # Dynamic training detail page
+│   │   └── UnderConstruction/       # Placeholder for upcoming pages
 │   ├── utils/
 │   │   ├── hooks/
 │   │   ├── scripts/
@@ -135,6 +146,7 @@ imen-clone/
 │   │   └── style/
 │   │       └── app.css
 │   └── main.jsx                      # App entry + Router setup
+├── africhat.config.js                # My-AfriChat configuration (Amina assistant)
 ├── index.html
 ├── package.json
 ├── vite.config.js
@@ -167,10 +179,33 @@ Configures SPA rewrites + asset caching.
 | <img src="src/assets/screenshots/home_page.png" width="280" alt="Home Page"> | <img src="src/assets/screenshots/training_page.png" width="280" alt="Training Detail Page"> | <img src="src/assets/screenshots/404_page.png" width="280" alt="404 Error Page"> |
 | **Digital Department** | **Design Department** | **Continuing Education** |
 | <img src="src/assets/screenshots/department-digital_page.png" width="280" alt="Digital Department Page"> | <img src="src/assets/screenshots/department-design_page.png" width="280" alt="Design Department Page"> | <img src="src/assets/screenshots/continuing-education_page.png" width="280" alt="Continuing Education Page"> |
+| **Programs Page** | **Under Construction** | |
+| <img src="src/assets/screenshots/programs_page.png" width="280" alt="Programs Page"> | <img src="src/assets/screenshots/under-construction_page.png" width="280" alt="Under Construction Page"> | |
 
 ## 📝 Changelog
 
-### Version 0.6.12 (Current)
+### Version 0.9.14 (Current)
+- ✅ Added **Programs Page** (`/programs`) with RichTextBlock components displaying 4 programs
+  - Programme d'Insertion Professionnelle (PIP)
+  - Programme de Formation en Entrepreneuriat (PFE)
+  - Foire de l'Emploi
+  - IMeN Boost Days
+- ✅ Added **UnderConstruction Page** for upcoming routes with reusable placeholder component
+- ✅ Implemented **My-AfriChat Integration** (AI Chat Assistant "Amina")
+  - Added `my-africhat` v0.1.3 dependency
+  - Created `AfriChatBootstrap` component
+  - Added `africhat.config.js` with custom IMeN configuration
+  - Features: voice output, multilingual support, professional persona
+- ✅ Added **RichTextBlock** reusable component
+- ✅ Added 11 new routes using UnderConstruction placeholder:
+  - `/school`, `/our-vision`, `/our-network`, `/certification-process`
+  - `/workshops`, `/blog`, `/events`, `/jobs`, `/about`
+  - `/student-portfolio`, `/student-registration`
+- ✅ Added screenshots for Programs and UnderConstruction pages
+- ✅ Updated Project Structure documentation
+- ✅ Synced version to package.json 0.9.14
+
+### Version 0.6.12
 - ✅ Added Department pages (`/department/:dept`) with dynamic routing for Numérique, Design, and Continuing Education
 - ✅ Created reusable `ErrorNotFound` component with configurable auto-redirect countdown
 - ✅ Added `BoxDetail` UI component for training metadata side-panel
