@@ -33,6 +33,7 @@ function Vision() {
                         conclusionText={info.conclusionText}
                         moreIconPrimary={ZoomInPrimary}
                         moreIconSecondary={ZoomInSecondary}
+                        detailTitleColor="text-black"
                         hasTopBorder={false}
                         hasBottomBorder={info.id !== visionInfo.length}
                         paddingY="pt-8 pb-0"
