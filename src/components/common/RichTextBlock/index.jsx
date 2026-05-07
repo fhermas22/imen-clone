@@ -1,8 +1,14 @@
+import { Link } from "react-router-dom";
+
 function RichTextBlock({ 
     title, 
     paragraphs, 
     introductionText,
     detailedParagraphs,
+    conclusionText,
+    moreIconPrimary,
+    moreIconSecondary,
+    moreIconSize = 20,
     hasTopBorder = false, 
     hasBottomBorder = false, 
     paddingY = "py-8", 
@@ -94,9 +100,37 @@ function RichTextBlock({
                     </h3>
                     <p key={index} className="font-body text-black text-base leading-8 md:text-lg">
                         {renderFormattedText(paragraph.content)}
+                        {paragraph.seeMoreLink && (
+                            <Link 
+                                to={paragraph.seeMoreLink} 
+                                className="inline-flex items-center ml-2 align-middle group transition-transform duration-500 ease-in-out hover:scale-125"
+                            >
+                                <img 
+                                  src={moreIconPrimary}
+                                  alt="Cliquez pour en savoir plus"
+                                  width={moreIconSize}
+                                  height={moreIconSize}
+                                  className="inline-block group-hover:hidden"
+                                />
+                                <img 
+                                  src={moreIconSecondary}
+                                  alt="Cliquez pour en savoir plus"
+                                  width={moreIconSize}
+                                  height={moreIconSize}
+                                  className="hidden group-hover:inline-block"
+                                />
+                            </Link>
+                        )}
                     </p>
                 </span>
             ))}
+
+            {/* Conclusion Text */}
+            {conclusionText && (
+                <p className="font-body text-black text-base leading-8 md:text-lg">
+                    {renderFormattedText(conclusionText)}
+                </p>
+            )}
 
             {/* Bottom Border */}
             {hasBottomBorder && <div className="w-full h-0.5 bg-secondary mt-6 rounded-full lg:mt-8"></div>}
