@@ -10,7 +10,8 @@ import { AfriChatBootstrap } from './components/ui/AfriChatBootstrap/index.jsx';
 import Header from './components/layout/Header/index.jsx'
 import Footer from './components/layout/Footer/index.jsx';
 {/*== Page Imports  == */}
-import Home from './pages/Home/index.jsx'
+import Home from './pages/Home/index.jsx';
+import School from './pages/School/index.jsx';
 import Training from './pages/Training/index.jsx';
 import Department from './pages/Department/index.jsx';
 import Programs from './pages/Programs/index.jsx';
@@ -26,12 +27,12 @@ createRoot(document.getElementById('root')).render(
       <Routes>
         {/* Completed Routes */}
         <Route path="/" element={<Home />} />
+        <Route path="/school" element={<School />} />
         <Route path="/training/:id" element={<Training />} />
         <Route path="/department/:dept" element={<Department />} />
         <Route path="/programs" element={<Programs />} />
 
         {/* Routes under construction */}
-        <Route path="/school" element={<UnderConstruction />} />
         <Route path="/our-vision" element={<UnderConstruction />} />
         <Route path="/our-network" element={<UnderConstruction />} />
         <Route path="/certification-process" element={<UnderConstruction />} />
