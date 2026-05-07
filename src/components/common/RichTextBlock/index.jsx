@@ -9,6 +9,7 @@ function RichTextBlock({
     moreIconPrimary,
     moreIconSecondary,
     moreIconSize = 20,
+    detailTitleColor = "text-primary",
     hasTopBorder = false, 
     hasBottomBorder = false, 
     paddingY = "py-8", 
@@ -95,7 +96,7 @@ function RichTextBlock({
             {/* Detailed Paragraphs */}
             {detailedParagraphs && detailedParagraphs.map((paragraph, index) => (
                 <span>
-                    <h3 className="font-body text-primary text-lg font-bold">
+                    <h3 className={`font-body ${detailTitleColor} text-lg font-bold`}>
                         {paragraph.id}. {paragraph.title} :
                     </h3>
                     <p key={index} className="font-body text-black text-base leading-8 md:text-lg">
