@@ -5,7 +5,7 @@
 [![React](https://img.shields.io/badge/React-19.2.0-blue?style=for-the-badge&logo=react)](https://react.dev)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.1.18-38bdf8?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com)
 [![Vite](https://img.shields.io/badge/Vite-7.3.1-646CFF?style=for-the-badge&logo=vite)](https://vite.dev)
-[![Version](https://img.shields.io/badge/Version-0.9.14-green?style=flat-square)](https://github.com/fhermas22/imen-clone)
+[![Version](https://img.shields.io/badge/Version-0.11.14-green?style=flat-square)](https://github.com/fhermas22/imen-clone)
 [![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel)](https://vercel.com)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
@@ -23,6 +23,8 @@
 - **Why Choose Us** — ValuePoint list (4 points) with illustration and CTA
 - **Continuing Education** — 6 TrainingCards (Développement Web, Analyse de Données, Maintenance Informatique, Montage Vidéo, Graphisme, Web Design)
 - **Department Pages** — Dynamic `/department/:dept` routes (Numérique, Design, Continuing Education) with hero illustrations and filtered training grids
+- **School Page** — `/school` page with data-driven RichTextBlock sections and CTAs
+- **Vision Page** — `/our-vision` page with data-driven RichTextBlock sections and CTAs
 - **Training Detail Page** — `/training/:id` route with TrainingDetail, BoxDetail components, and downloadable payment terms
 - **Programs Page** — `/programs` route displaying 4 programs (PIP, PFE, Foire de l'Emploi, IMeN Boost Days) with RichTextBlock components
 - **Under Construction Pages** — Reusable placeholder component for upcoming routes with countdown redirect
@@ -137,8 +139,10 @@ imen-clone/
 │   │   ├── Error/                    # 404 error page
 │   │   ├── Home/                     # Landing page with 6 sections
 │   │   ├── Programs/                 # Programs listing page
+|   |   ├── School/                 # School presentation page
 │   │   ├── Training/                 # Dynamic training detail page
-│   │   └── UnderConstruction/       # Placeholder for upcoming pages
+│   │   ├── UnderConstruction/       # Placeholder for upcoming pages
+|   |   └── Vision/                 # Vision page
 │   ├── utils/
 │   │   ├── hooks/
 │   │   ├── scripts/
@@ -179,12 +183,21 @@ Configures SPA rewrites + asset caching.
 | <img src="src/assets/screenshots/home_page.png" width="280" alt="Home Page"> | <img src="src/assets/screenshots/training_page.png" width="280" alt="Training Detail Page"> | <img src="src/assets/screenshots/404_page.png" width="280" alt="404 Error Page"> |
 | **Digital Department** | **Design Department** | **Continuing Education** |
 | <img src="src/assets/screenshots/department-digital_page.png" width="280" alt="Digital Department Page"> | <img src="src/assets/screenshots/department-design_page.png" width="280" alt="Design Department Page"> | <img src="src/assets/screenshots/continuing-education_page.png" width="280" alt="Continuing Education Page"> |
-| **Programs Page** | **Under Construction** | |
-| <img src="src/assets/screenshots/programs_page.png" width="280" alt="Programs Page"> | <img src="src/assets/screenshots/under-construction_page.png" width="280" alt="Under Construction Page"> | |
+| **Programs Page** | **Under Construction** | **School Page** |
+| <img src="src/assets/screenshots/programs_page.png" width="280" alt="Programs Page"> | <img src="src/assets/screenshots/under-construction_page.png" width="280" alt="Under Construction Page"> | <img src="src/assets/screenshots/school_page.png" width="280" alt="School Page"> |
+| **Vision Page** |  |  |
+| <img src="src/assets/screenshots/vision_page.png" width="280" alt="Vision Page"> |  |  |
+
 
 ## 📝 Changelog
 
-### Version 0.9.14 (Current)
+### Version 0.11.14 (Current)
+- ✅ Added **School** and **Vision** pages (`/school`, `/our-vision`) with data-driven RichTextBlock content
+- ✅ Added screenshots for School and Vision pages
+- ✅ Updated Project Structure documentation
+- ✅ Synced version to package.json 0.11.14
+
+### Version 0.9.14
 - ✅ Added **Programs Page** (`/programs`) with RichTextBlock components displaying 4 programs
   - Programme d'Insertion Professionnelle (PIP)
   - Programme de Formation en Entrepreneuriat (PFE)
