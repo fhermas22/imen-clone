@@ -126,10 +126,25 @@ function Training() {
 
                         {/*==== Sub-Section : Action Buttons ====*/}
                         <div className="w-full flex flex-col items-center gap-4 mt-6">
-                            <Button isPrimary={true} py={"py-2 xs:py-2.5 md:py-3"} textSize={"text-sm md:text-base"} hoverScale="hover:scale-106" className="w-full capitalize">
+                            <Button 
+                              isPrimary={true} 
+                              to={"/student-registration"}
+                              py={"py-2 xs:py-2.5 md:py-3"} 
+                              textSize={"text-sm md:text-base"} 
+                              hoverScale="hover:scale-106" 
+                              className="w-full capitalize"
+                            >
                                 Devenir étudiant
                             </Button>
-                            <Button isPrimary={true} isDownload={true} href={ImenPaymentTerms} py={"py-2 xs:py-2.5 md:py-3"} textSize={"text-sm md:text-base"} hoverScale="hover:scale-106" className="w-full capitalize">
+                            <Button 
+                               isPrimary={true} 
+                               isDownload={true} 
+                               href={ImenPaymentTerms} 
+                               py={"py-2 xs:py-2.5 md:py-3"} 
+                               textSize={"text-sm md:text-base"} 
+                               hoverScale="hover:scale-106" 
+                               className="w-full capitalize"
+                            >
                                 Télécharger les modalités
                             </Button>
                         </div>
