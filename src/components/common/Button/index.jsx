@@ -12,6 +12,7 @@ const Button = ({
     px,
     py,
     textSize,
+    rounded = "rounded-4xl",
     hoverScale
 }) => {
     // Default padding management
@@ -28,11 +29,12 @@ const Button = ({
         ${isPrimary ? 'bg-primary text-white hover:bg-secondary hover:text-black' : 'bg-secondary text-black hover:bg-primary hover:text-white'} 
         ${textSizing}
         ${scaleEffect}
-        font-body rounded-4xl 
+        font-body 
         transition-all duration-500 ease-in-out cursor-pointer
         active:scale-95 text-center inline-block 
         ${paddingX} 
         ${paddingY}
+        ${rounded}
         ${className}
     `;
 
