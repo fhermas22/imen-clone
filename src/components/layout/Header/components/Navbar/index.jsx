@@ -131,7 +131,7 @@ function Navbar() {
                     <li>
                         <Link 
                             className="text-primary font-title font-medium hover:text-secondary transition duration-300" 
-                            to="/about" 
+                            to="/contact" 
                             onClick={closeMenu}
                         >
                             Contact
