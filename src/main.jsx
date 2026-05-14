@@ -13,11 +13,12 @@ import Footer from './components/layout/Footer/index.jsx';
 import Home from './pages/Home/index.jsx';
 import School from './pages/School/index.jsx';
 import Vision from './pages/Vision/index.jsx'
+import CertificationProcess from './pages/CertificationProcess/index.jsx';
 import Training from './pages/Training/index.jsx';
 import Department from './pages/Department/index.jsx';
 import Programs from './pages/Programs/index.jsx';
 import Error from './pages/Error/index.jsx';
-import UnderConstruction from './pages/UnderConstruction/index.jsx';;
+import UnderConstruction from './pages/UnderConstruction/index.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -30,13 +31,13 @@ createRoot(document.getElementById('root')).render(
         <Route path="/" element={<Home />} />
         <Route path="/school" element={<School />} />
         <Route path="/our-vision" element={<Vision />} />
+        <Route path="/certification-process" element={<CertificationProcess />} />
         <Route path="/training/:id" element={<Training />} />
         <Route path="/department/:dept" element={<Department />} />
         <Route path="/programs" element={<Programs />} />
 
         {/* Routes under construction */}
         <Route path="/our-network" element={<UnderConstruction />} />
-        <Route path="/certification-process" element={<UnderConstruction />} />
         <Route path="/workshops" element={<UnderConstruction />} />
         <Route path="/blog" element={<UnderConstruction />} />
         <Route path="/events" element={<UnderConstruction />} />
