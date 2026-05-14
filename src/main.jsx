@@ -17,6 +17,7 @@ import CertificationProcess from './pages/CertificationProcess/index.jsx';
 import Training from './pages/Training/index.jsx';
 import Department from './pages/Department/index.jsx';
 import Programs from './pages/Programs/index.jsx';
+import Contact from './pages/Contact/index.jsx';
 import Error from './pages/Error/index.jsx';
 import UnderConstruction from './pages/UnderConstruction/index.jsx';
 
@@ -35,6 +36,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/training/:id" element={<Training />} />
         <Route path="/department/:dept" element={<Department />} />
         <Route path="/programs" element={<Programs />} />
+        <Route path="/contact" element={<Contact />} />
 
         {/* Routes under construction */}
         <Route path="/our-network" element={<UnderConstruction />} />
@@ -42,7 +44,6 @@ createRoot(document.getElementById('root')).render(
         <Route path="/blog" element={<UnderConstruction />} />
         <Route path="/events" element={<UnderConstruction />} />
         <Route path="/jobs" element={<UnderConstruction />} />
-        <Route path="/about" element={<UnderConstruction />} />
         <Route path="/student-portfolio" element={<UnderConstruction />} />
         <Route path="/student-registration" element={<UnderConstruction />} />
 
