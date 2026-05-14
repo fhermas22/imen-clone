@@ -97,7 +97,7 @@ function RichTextBlock({
             {/* Detailed Paragraphs */}
             {detailedParagraphs && detailedParagraphs.map((paragraph, index) => (
                 <span>
-                    <h3 className={`font-body ${detailTitleColor} text-lg ${paragraph.titleBold ? 'font-bold' : ''} ${paragraph.titleUppercase ? 'uppercase' : ''}`}>
+                    <h3 className={`font-body text-base ${detailTitleColor} md:text-lg ${paragraph.titleBold ? 'font-bold' : ''} ${paragraph.titleUppercase ? 'uppercase' : ''}`}>
                         {paragraph.hasLeadingIcon && (
                             <img 
                                 src={paragraph.leadingIcon}
