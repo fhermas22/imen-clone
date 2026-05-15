@@ -21,27 +21,32 @@ export const schoolInfo = [
             {
                 id: 1,
                 title: "Pour exceller dans votre domaine",
-                content: "Nos formateurs, experts reconnus, façonnent votre avenir professionnel avec des compétences de pointe."
+                content: "Nos formateurs, experts reconnus, façonnent votre avenir professionnel avec des compétences de pointe.",
+                titleBold: true,
             },
             {
                 id: 2,
                 title: "Pour une formation 100% pratique",
-                content: "Nos cours sont conçus pour vous rendre immédiatement opérationnel sur le terrain."
+                content: "Nos cours sont conçus pour vous rendre immédiatement opérationnel sur le terrain.",
+                titleBold: true,
             },
             {
                 id: 3,
                 title: "Pour un avenir professionnel sécurisé",
-                content: "Avec un stage garanti et un accompagnement personnalisé vers l’emploi, nos certifiés rejoignent un réseau de plus de 200 entreprises partenaires."
+                content: "Avec un stage garanti et un accompagnement personnalisé vers l’emploi, nos certifiés rejoignent un réseau de plus de 200 entreprises partenaires.",
+                titleBold: true,
             },
             {
                 id: 4,
                 title: "Apprenez l’anglais pour vous ouvrir au monde",
-                content: "Tous nos étudiants profitent d’un accès gratuit à l’**IMeN English Academy**, pour maîtriser l’anglais et élargir leurs opportunités à l’international."
+                content: "Tous nos étudiants profitent d’un accès gratuit à l’**IMeN English Academy**, pour maîtriser l’anglais et élargir leurs opportunités à l’international.",
+                titleBold: true,
             },
             {
                 id: 5,
                 title: "Pour un certificat reconnu",
-                content: "Votre formation est validée par un certificat reconnu par l’État, ouvrant des portes tant au niveau national qu’international."
+                content: "Votre formation est validée par un certificat reconnu par l’État, ouvrant des portes tant au niveau national qu’international.",
+                titleBold: true,
             }
         ]
     },
@@ -54,17 +59,20 @@ export const schoolInfo = [
             {
                 id: 1,
                 title: "Formation métier par la pratique",
-                content: "Nous formons nos étudiants à des métiers concrets, avec un focus sur la pratique pour qu’ils soient immédiatement opérationnels à la fin de leur formation."
+                content: "Nous formons nos étudiants à des métiers concrets, avec un focus sur la pratique pour qu’ils soient immédiatement opérationnels à la fin de leur formation.",
+                titleBold: true,
             },
             {
                 id: 2,
                 title: "Focus sur l’humain",
-                content: "Nous plaçons l’humain au centre de notre démarche, forgeant des professionnels résilients, prêts à réussir dans leur vie socioprofessionnelle."
+                content: "Nous plaçons l’humain au centre de notre démarche, forgeant des professionnels résilients, prêts à réussir dans leur vie socioprofessionnelle.",
+                titleBold: true,
             },
             {
                 id: 3,
                 title: "Accompagnement vers l’emploi et l’auto-emploi",
-                content: "Nous formons nos étudiants pour l’emploi ou l’auto-emploi, les accompagnant dans la création de leur propre activité ou dans le démarrage d’une carrière en entreprise, afin de lutter efficacement contre le chômage."
+                content: "Nous formons nos étudiants pour l’emploi ou l’auto-emploi, les accompagnant dans la création de leur propre activité ou dans le démarrage d’une carrière en entreprise, afin de lutter efficacement contre le chômage.",
+                titleBold: true,
             }
         ]
     }

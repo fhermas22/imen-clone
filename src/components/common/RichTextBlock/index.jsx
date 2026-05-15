@@ -10,6 +10,7 @@ function RichTextBlock({
     moreIconSecondary,
     moreIconSize = 20,
     detailTitleColor = "text-primary",
+    detailTitleLeadingIconSize = 16,
     hasTopBorder = false, 
     hasBottomBorder = false, 
     paddingY = "py-8", 
@@ -96,8 +97,17 @@ function RichTextBlock({
             {/* Detailed Paragraphs */}
             {detailedParagraphs && detailedParagraphs.map((paragraph, index) => (
                 <span>
-                    <h3 className={`font-body ${detailTitleColor} text-lg font-bold`}>
-                        {paragraph.id}. {paragraph.title} :
+                    <h3 className={`font-body text-base ${detailTitleColor} md:text-lg ${paragraph.titleBold ? 'font-bold' : ''} ${paragraph.titleUppercase ? 'uppercase' : ''}`}>
+                        {paragraph.hasLeadingIcon && (
+                            <img 
+                                src={paragraph.leadingIcon}
+                                alt={`Icône de ${paragraph.title}`}
+                                width={detailTitleLeadingIconSize}
+                                height={detailTitleLeadingIconSize}
+                                className="inline-block align-middle mr-1"
+                            />
+                        )}
+                        {!paragraph.hasLeadingIcon && `${paragraph.id}.`} {paragraph.content !== "" ? `${paragraph.title} :` : paragraph.title} 
                     </h3>
                     <p key={index} className="font-body text-black text-base leading-8 md:text-lg">
                         {renderFormattedText(paragraph.content)}
