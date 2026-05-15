@@ -1,7 +1,7 @@
 {
   "name": "imen-clone",
   "private": true,
-  "version": "0.11.14",
+  "version": "1.13.16",
   "type": "module",
   "scripts": {
     "dev": "vite",
