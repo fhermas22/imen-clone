@@ -111,9 +111,12 @@ function Footer() {
             </div>
 
             {/* Copyright */}
-            <div className="flex items-center justify-center py-7 border-t border-footer-border lg:py-6">
+            <div className="flex flex-col gap-1 items-center justify-center py-7 border-t border-footer-border md:flex-row lg:py-6">
                 <p className="font-body text-black text-xs lg:text-sm">
                     Copyright IMeN © {currentYear} | Tout droits réservés.
+                </p>
+                <p className="font-body text-black text-xs lg:text-sm">
+                    Made with 💙 by <a href="https://github.com/fhermas22" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 transition-colors duration-500 ease-in-out hover:text-primary">fhermas22</a>.
                 </p>
             </div>
         </footer>
